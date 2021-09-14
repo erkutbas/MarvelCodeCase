@@ -3,19 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A759891326F1302E008B11CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759891226F1302E008B11CF /* AppDelegate.swift */; };
-		A759891526F1302E008B11CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759891426F1302E008B11CF /* SceneDelegate.swift */; };
-		A759891726F1302E008B11CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759891626F1302E008B11CF /* ViewController.swift */; };
-		A759891A26F1302E008B11CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A759891826F1302E008B11CF /* Main.storyboard */; };
 		A759891D26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A759891B26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld */; };
 		A759891F26F1302F008B11CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A759891E26F1302F008B11CF /* Assets.xcassets */; };
 		A759892226F1302F008B11CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A759892026F1302F008B11CF /* LaunchScreen.storyboard */; };
 		A759892D26F1302F008B11CF /* MarvelCodeCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759892C26F1302F008B11CF /* MarvelCodeCaseTests.swift */; };
 		A759893826F1302F008B11CF /* MarvelCodeCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759893726F1302F008B11CF /* MarvelCodeCaseUITests.swift */; };
+		A759895626F13072008B11CF /* MainViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759895326F13072008B11CF /* MainViewAssembler.swift */; };
+		A759895726F13072008B11CF /* Assembler+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759895526F13072008B11CF /* Assembler+Extension.swift */; };
+		A759895F26F13079008B11CF /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759895A26F13079008B11CF /* BaseViewModelDelegate.swift */; };
+		A759896026F13079008B11CF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759895D26F13079008B11CF /* BaseCoordinator.swift */; };
+		A759896126F13079008B11CF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759895E26F13079008B11CF /* Coordinator.swift */; };
+		A759896426F130B0008B11CF /* DataLayerPackage in Frameworks */ = {isa = PBXBuildFile; productRef = A759896326F130B0008B11CF /* DataLayerPackage */; };
+		A759896726F130C9008B11CF /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A759896626F130C9008B11CF /* Swinject */; };
+		A759896A26F130DD008B11CF /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = A759896926F130DD008B11CF /* SwinjectAutoregistration */; };
+		A759896D26F130F5008B11CF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A759896C26F130F5008B11CF /* RxSwift */; };
+		A759896F26F130F5008B11CF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A759896E26F130F5008B11CF /* RxCocoa */; };
+		A759897126F130F5008B11CF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = A759897026F130F5008B11CF /* RxRelay */; };
+		A759897326F1315D008B11CF /* SplashViewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A759897226F1315D008B11CF /* SplashViewStoryBoard.storyboard */; };
+		A759897526F131A2008B11CF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897426F131A2008B11CF /* SplashViewController.swift */; };
+		A759897E26F13485008B11CF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897726F13485008B11CF /* BaseViewController.swift */; };
+		A759897F26F13485008B11CF /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897826F13485008B11CF /* GenericBaseView.swift */; };
+		A759898026F13485008B11CF /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897926F13485008B11CF /* BaseView.swift */; };
+		A759898126F13485008B11CF /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897A26F13485008B11CF /* BaseTableViewCell.swift */; };
+		A759898226F13485008B11CF /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897B26F13485008B11CF /* BaseCollectionViewCell.swift */; };
+		A759898326F13485008B11CF /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897C26F13485008B11CF /* GenericTableViewCell.swift */; };
+		A759898426F13485008B11CF /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759897D26F13485008B11CF /* GenericCollectionViewCell.swift */; };
+		A759898626F134DB008B11CF /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759898526F134DB008B11CF /* SplashViewModel.swift */; };
+		A759898B26F13637008B11CF /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759898A26F13637008B11CF /* BaseRouter.swift */; };
+		A759898D26F138DE008B11CF /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759898C26F138DE008B11CF /* SplashCoordinator.swift */; };
+		A759898F26F1391F008B11CF /* AwakingStoryBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759898E26F1391F008B11CF /* AwakingStoryBoard.swift */; };
+		A759899126F1393D008B11CF /* ApplicationStoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899026F1393D008B11CF /* ApplicationStoryBoards.swift */; };
+		A759899326F13949008B11CF /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899226F13949008B11CF /* GenericValueProtocol.swift */; };
+		A759899526F13A8B008B11CF /* InteractivePopGestureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899426F13A8B008B11CF /* InteractivePopGestureDelegate.swift */; };
+		A759899726F13AD0008B11CF /* ViewControllerTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899626F13AD0008B11CF /* ViewControllerTypeProtocol.swift */; };
+		A759899926F13BA9008B11CF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899826F13BA9008B11CF /* AppCoordinator.swift */; };
+		A759899B26F13BB4008B11CF /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899A26F13BB4008B11CF /* AppViewModel.swift */; };
+		A759899D26F13C3F008B11CF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899C26F13C3F008B11CF /* MainCoordinator.swift */; };
+		A759899F26F13C46008B11CF /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A759899E26F13C46008B11CF /* MainViewModel.swift */; };
+		A75989A126F13C4E008B11CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989A026F13C4E008B11CF /* MainViewController.swift */; };
+		A75989A526F140AA008B11CF /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989A426F140AA008B11CF /* ViewControllerUtils.swift */; };
+		A75989AA26F14127008B11CF /* AssemblerResolverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989A926F14127008B11CF /* AssemblerResolverDelegate.swift */; };
+		A75989AD26F1420C008B11CF /* AppCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989AC26F1420C008B11CF /* AppCoordinatorAssembler.swift */; };
+		A75989B026F14252008B11CF /* SplashViewAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989AF26F14252008B11CF /* SplashViewAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +72,6 @@
 /* Begin PBXFileReference section */
 		A759890F26F1302E008B11CF /* MarvelCodeCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelCodeCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A759891226F1302E008B11CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A759891426F1302E008B11CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A759891626F1302E008B11CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A759891926F1302E008B11CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A759891C26F1302E008B11CF /* MarvelCodeCase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelCodeCase.xcdatamodel; sourceTree = "<group>"; };
 		A759891E26F1302F008B11CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A759892126F1302F008B11CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +82,37 @@
 		A759893326F1302F008B11CF /* MarvelCodeCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelCodeCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A759893726F1302F008B11CF /* MarvelCodeCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCodeCaseUITests.swift; sourceTree = "<group>"; };
 		A759893926F1302F008B11CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A759895326F13072008B11CF /* MainViewAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewAssembler.swift; sourceTree = "<group>"; };
+		A759895526F13072008B11CF /* Assembler+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assembler+Extension.swift"; sourceTree = "<group>"; };
+		A759895A26F13079008B11CF /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
+		A759895D26F13079008B11CF /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		A759895E26F13079008B11CF /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A759897226F1315D008B11CF /* SplashViewStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewStoryBoard.storyboard; sourceTree = "<group>"; };
+		A759897426F131A2008B11CF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A759897726F13485008B11CF /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A759897826F13485008B11CF /* GenericBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		A759897926F13485008B11CF /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A759897A26F13485008B11CF /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		A759897B26F13485008B11CF /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		A759897C26F13485008B11CF /* GenericTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		A759897D26F13485008B11CF /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
+		A759898526F134DB008B11CF /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		A759898A26F13637008B11CF /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		A759898C26F138DE008B11CF /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		A759898E26F1391F008B11CF /* AwakingStoryBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwakingStoryBoard.swift; sourceTree = "<group>"; };
+		A759899026F1393D008B11CF /* ApplicationStoryBoards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStoryBoards.swift; sourceTree = "<group>"; };
+		A759899226F13949008B11CF /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
+		A759899426F13A8B008B11CF /* InteractivePopGestureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractivePopGestureDelegate.swift; sourceTree = "<group>"; };
+		A759899626F13AD0008B11CF /* ViewControllerTypeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTypeProtocol.swift; sourceTree = "<group>"; };
+		A759899826F13BA9008B11CF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A759899A26F13BB4008B11CF /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		A759899C26F13C3F008B11CF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A759899E26F13C46008B11CF /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A75989A026F13C4E008B11CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A75989A426F140AA008B11CF /* ViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		A75989A926F14127008B11CF /* AssemblerResolverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerResolverDelegate.swift; sourceTree = "<group>"; };
+		A75989AC26F1420C008B11CF /* AppCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		A75989AF26F14252008B11CF /* SplashViewAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +120,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A759897126F130F5008B11CF /* RxRelay in Frameworks */,
+				A759896426F130B0008B11CF /* DataLayerPackage in Frameworks */,
+				A759896726F130C9008B11CF /* Swinject in Frameworks */,
+				A759896F26F130F5008B11CF /* RxCocoa in Frameworks */,
+				A759896D26F130F5008B11CF /* RxSwift in Frameworks */,
+				A759896A26F130DD008B11CF /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +169,11 @@
 		A759891126F1302E008B11CF /* MarvelCodeCase */ = {
 			isa = PBXGroup;
 			children = (
+				A75989A226F1409C008B11CF /* Utilities */,
+				A759895826F13079008B11CF /* SupportingFiles */,
+				A759894F26F13072008B11CF /* Managers */,
+				A759894726F1306A008B11CF /* Coordinators */,
 				A759891226F1302E008B11CF /* AppDelegate.swift */,
-				A759891426F1302E008B11CF /* SceneDelegate.swift */,
-				A759891626F1302E008B11CF /* ViewController.swift */,
-				A759891826F1302E008B11CF /* Main.storyboard */,
 				A759891E26F1302F008B11CF /* Assets.xcassets */,
 				A759892026F1302F008B11CF /* LaunchScreen.storyboard */,
 				A759892326F1302F008B11CF /* Info.plist */,
@@ -131,6 +200,209 @@
 			path = MarvelCodeCaseUITests;
 			sourceTree = "<group>";
 		};
+		A759894726F1306A008B11CF /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				A759894826F1306A008B11CF /* SplashCoordinator */,
+				A759894A26F1306A008B11CF /* AppCoordinator */,
+				A759894B26F1306A008B11CF /* MainCoordinator */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		A759894826F1306A008B11CF /* SplashCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A759897226F1315D008B11CF /* SplashViewStoryBoard.storyboard */,
+				A759897426F131A2008B11CF /* SplashViewController.swift */,
+				A759898526F134DB008B11CF /* SplashViewModel.swift */,
+				A759898C26F138DE008B11CF /* SplashCoordinator.swift */,
+			);
+			path = SplashCoordinator;
+			sourceTree = "<group>";
+		};
+		A759894A26F1306A008B11CF /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A759899826F13BA9008B11CF /* AppCoordinator.swift */,
+				A759899A26F13BB4008B11CF /* AppViewModel.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		A759894B26F1306A008B11CF /* MainCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A759899C26F13C3F008B11CF /* MainCoordinator.swift */,
+				A759899E26F13C46008B11CF /* MainViewModel.swift */,
+				A75989A026F13C4E008B11CF /* MainViewController.swift */,
+			);
+			path = MainCoordinator;
+			sourceTree = "<group>";
+		};
+		A759894F26F13072008B11CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A759895026F13072008B11CF /* DependencyManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		A759895026F13072008B11CF /* DependencyManager */ = {
+			isa = PBXGroup;
+			children = (
+				A75989A826F14117008B11CF /* Protocols */,
+				A759895126F13072008B11CF /* Assemblers */,
+				A759895426F13072008B11CF /* Extensions */,
+			);
+			path = DependencyManager;
+			sourceTree = "<group>";
+		};
+		A759895126F13072008B11CF /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				A75989AE26F1423D008B11CF /* SplashViewAssembler */,
+				A75989AB26F141E8008B11CF /* AppCoordinatorAssembler */,
+				A759895226F13072008B11CF /* MainViewAssembler */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		A759895226F13072008B11CF /* MainViewAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				A759895326F13072008B11CF /* MainViewAssembler.swift */,
+			);
+			path = MainViewAssembler;
+			sourceTree = "<group>";
+		};
+		A759895426F13072008B11CF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A759895526F13072008B11CF /* Assembler+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A759895826F13079008B11CF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A759895926F13079008B11CF /* CommonModules */,
+				A759895B26F13079008B11CF /* BaseModules */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A759895926F13079008B11CF /* CommonModules */ = {
+			isa = PBXGroup;
+			children = (
+				A759898826F13545008B11CF /* Enums */,
+				A759898726F1353C008B11CF /* Protocols */,
+			);
+			path = CommonModules;
+			sourceTree = "<group>";
+		};
+		A759895B26F13079008B11CF /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				A759898926F13629008B11CF /* Routers */,
+				A759897626F13477008B11CF /* Views */,
+				A759895C26F13079008B11CF /* Coordinator */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		A759895C26F13079008B11CF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A759895D26F13079008B11CF /* BaseCoordinator.swift */,
+				A759895E26F13079008B11CF /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A759897626F13477008B11CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A759897B26F13485008B11CF /* BaseCollectionViewCell.swift */,
+				A759897A26F13485008B11CF /* BaseTableViewCell.swift */,
+				A759897926F13485008B11CF /* BaseView.swift */,
+				A759897726F13485008B11CF /* BaseViewController.swift */,
+				A759897826F13485008B11CF /* GenericBaseView.swift */,
+				A759897D26F13485008B11CF /* GenericCollectionViewCell.swift */,
+				A759897C26F13485008B11CF /* GenericTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A759898726F1353C008B11CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A759895A26F13079008B11CF /* BaseViewModelDelegate.swift */,
+				A759898E26F1391F008B11CF /* AwakingStoryBoard.swift */,
+				A759899026F1393D008B11CF /* ApplicationStoryBoards.swift */,
+				A759899226F13949008B11CF /* GenericValueProtocol.swift */,
+				A759899426F13A8B008B11CF /* InteractivePopGestureDelegate.swift */,
+				A759899626F13AD0008B11CF /* ViewControllerTypeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A759898826F13545008B11CF /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		A759898926F13629008B11CF /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				A759898A26F13637008B11CF /* BaseRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		A75989A226F1409C008B11CF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A75989A326F140A1008B11CF /* ViewControllerUtils */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A75989A326F140A1008B11CF /* ViewControllerUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A75989A426F140AA008B11CF /* ViewControllerUtils.swift */,
+			);
+			path = ViewControllerUtils;
+			sourceTree = "<group>";
+		};
+		A75989A826F14117008B11CF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A75989A926F14127008B11CF /* AssemblerResolverDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A75989AB26F141E8008B11CF /* AppCoordinatorAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				A75989AC26F1420C008B11CF /* AppCoordinatorAssembler.swift */,
+			);
+			path = AppCoordinatorAssembler;
+			sourceTree = "<group>";
+		};
+		A75989AE26F1423D008B11CF /* SplashViewAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				A75989AF26F14252008B11CF /* SplashViewAssembler.swift */,
+			);
+			path = SplashViewAssembler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +419,14 @@
 			dependencies = (
 			);
 			name = MarvelCodeCase;
+			packageProductDependencies = (
+				A759896326F130B0008B11CF /* DataLayerPackage */,
+				A759896626F130C9008B11CF /* Swinject */,
+				A759896926F130DD008B11CF /* SwinjectAutoregistration */,
+				A759896C26F130F5008B11CF /* RxSwift */,
+				A759896E26F130F5008B11CF /* RxCocoa */,
+				A759897026F130F5008B11CF /* RxRelay */,
+			);
 			productName = MarvelCodeCase;
 			productReference = A759890F26F1302E008B11CF /* MarvelCodeCase.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +498,12 @@
 				Base,
 			);
 			mainGroup = A759890626F1302E008B11CF;
+			packageReferences = (
+				A759896226F130B0008B11CF /* XCRemoteSwiftPackageReference "DataLayerPackage" */,
+				A759896526F130C9008B11CF /* XCRemoteSwiftPackageReference "Swinject" */,
+				A759896826F130DD008B11CF /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = A759891026F1302E008B11CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +522,7 @@
 			files = (
 				A759892226F1302F008B11CF /* LaunchScreen.storyboard in Resources */,
 				A759891F26F1302F008B11CF /* Assets.xcassets in Resources */,
-				A759891A26F1302E008B11CF /* Main.storyboard in Resources */,
+				A759897326F1315D008B11CF /* SplashViewStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +547,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A759891726F1302E008B11CF /* ViewController.swift in Sources */,
+				A759899B26F13BB4008B11CF /* AppViewModel.swift in Sources */,
+				A75989AD26F1420C008B11CF /* AppCoordinatorAssembler.swift in Sources */,
+				A759895626F13072008B11CF /* MainViewAssembler.swift in Sources */,
+				A759895F26F13079008B11CF /* BaseViewModelDelegate.swift in Sources */,
 				A759891D26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld in Sources */,
+				A759898D26F138DE008B11CF /* SplashCoordinator.swift in Sources */,
+				A759898426F13485008B11CF /* GenericCollectionViewCell.swift in Sources */,
+				A759899526F13A8B008B11CF /* InteractivePopGestureDelegate.swift in Sources */,
+				A75989AA26F14127008B11CF /* AssemblerResolverDelegate.swift in Sources */,
+				A75989A126F13C4E008B11CF /* MainViewController.swift in Sources */,
+				A759897F26F13485008B11CF /* GenericBaseView.swift in Sources */,
+				A759898126F13485008B11CF /* BaseTableViewCell.swift in Sources */,
 				A759891326F1302E008B11CF /* AppDelegate.swift in Sources */,
-				A759891526F1302E008B11CF /* SceneDelegate.swift in Sources */,
+				A75989A526F140AA008B11CF /* ViewControllerUtils.swift in Sources */,
+				A759898626F134DB008B11CF /* SplashViewModel.swift in Sources */,
+				A759895726F13072008B11CF /* Assembler+Extension.swift in Sources */,
+				A759898F26F1391F008B11CF /* AwakingStoryBoard.swift in Sources */,
+				A759899926F13BA9008B11CF /* AppCoordinator.swift in Sources */,
+				A759898B26F13637008B11CF /* BaseRouter.swift in Sources */,
+				A759897E26F13485008B11CF /* BaseViewController.swift in Sources */,
+				A759896026F13079008B11CF /* BaseCoordinator.swift in Sources */,
+				A759899F26F13C46008B11CF /* MainViewModel.swift in Sources */,
+				A759896126F13079008B11CF /* Coordinator.swift in Sources */,
+				A759898026F13485008B11CF /* BaseView.swift in Sources */,
+				A75989B026F14252008B11CF /* SplashViewAssembler.swift in Sources */,
+				A759898226F13485008B11CF /* BaseCollectionViewCell.swift in Sources */,
+				A759897526F131A2008B11CF /* SplashViewController.swift in Sources */,
+				A759898326F13485008B11CF /* GenericTableViewCell.swift in Sources */,
+				A759899726F13AD0008B11CF /* ViewControllerTypeProtocol.swift in Sources */,
+				A759899D26F13C3F008B11CF /* MainCoordinator.swift in Sources */,
+				A759899126F1393D008B11CF /* ApplicationStoryBoards.swift in Sources */,
+				A759899326F13949008B11CF /* GenericValueProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,14 +614,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A759891826F1302E008B11CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A759891926F1302E008B11CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A759892026F1302F008B11CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -370,7 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -450,7 +756,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tukre.MarvelCodeCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,7 +775,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tukre.MarvelCodeCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -597,6 +903,74 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A759896226F130B0008B11CF /* XCRemoteSwiftPackageReference "DataLayerPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/erkutbas0/DataLayerPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.31;
+			};
+		};
+		A759896526F130C9008B11CF /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.0;
+			};
+		};
+		A759896826F130DD008B11CF /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/SwinjectAutoregistration.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A759896326F130B0008B11CF /* DataLayerPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896226F130B0008B11CF /* XCRemoteSwiftPackageReference "DataLayerPackage" */;
+			productName = DataLayerPackage;
+		};
+		A759896626F130C9008B11CF /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896526F130C9008B11CF /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		A759896926F130DD008B11CF /* SwinjectAutoregistration */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896826F130DD008B11CF /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
+			productName = SwinjectAutoregistration;
+		};
+		A759896C26F130F5008B11CF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		A759896E26F130F5008B11CF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A759897026F130F5008B11CF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A759891B26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld */ = {
