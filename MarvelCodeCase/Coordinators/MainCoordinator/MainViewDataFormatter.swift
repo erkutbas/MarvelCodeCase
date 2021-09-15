@@ -10,14 +10,20 @@ import MarvelDomainLayer
 
 protocol MainViewDataFormatter {
     
-    var data: CharacterListData? { get set }
-    var paginationData: PaginationInfo { get }
+    var paginationData: PaginationInfo { get set }
     
-    func getData(at index: Int) -> CharacterViewData?
+    func getRawData(at index: Int) -> CharacterData
+    
+    func getData(at index: Int) -> ContentDisplayerViewData?
     
     func getNumberOfSection() -> Int
     
     func getNumbeOfItem(in section: Int) -> Int
     
+    func getCount() -> Int
+    
+    func refresh()
+    
+    func setData(with response: CharacterDataResponse)
     
 }

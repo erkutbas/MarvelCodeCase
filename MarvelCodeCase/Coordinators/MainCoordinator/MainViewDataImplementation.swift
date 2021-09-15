@@ -10,12 +10,16 @@ import MarvelDomainLayer
 
 class MainViewDataImplementation: MainViewDataFormatter {
     
-    var data: CharacterListData?
+    private var data: CharacterListData!
+    private var list: [CharacterData] = [CharacterData]()
     var paginationData: PaginationInfo = PaginationInfo()
     
-    func getData(at index: Int) -> CharacterViewData? {
-        guard let data = data else { return nil }
-        return CharacterViewData(imageData: CustomImageViewComponentData(imageUrl: imageContentCreator(with: data.results[index].thumbnail)))
+    func getData(at index: Int) -> ContentDisplayerViewData? {
+        return ContentDisplayerViewData(imageData: CustomImageViewComponentData(imageUrl: list[index].thumbnail.imageContentCreator()), name: list[index].name)
+    }
+    
+    func getRawData(at index: Int) -> CharacterData {
+        return list[index]
     }
     
     func getNumberOfSection() -> Int {
@@ -23,11 +27,25 @@ class MainViewDataImplementation: MainViewDataFormatter {
     }
     
     func getNumbeOfItem(in section: Int) -> Int {
-        return data?.count ?? 0
+        let count = list.count
+        return (paginationData.limit <= paginationData.resultCount) ? count + 1 : count
     }
     
-    private func imageContentCreator(with thumbnail: Thumbnail) -> String {
-        return "\(thumbnail.path)/portrait_uncanny.\(thumbnail.thumbnailExtension)"
+    func getCount() -> Int {
+        return list.count
+    }
+    
+    func setData(with response: CharacterDataResponse) {
+        self.data = response.data
+        self.paginationData.resultCount = data.count
+        self.paginationData.refreshing = false
+        self.list.append(contentsOf: response.data.results)
+    }
+    
+    func refresh() {
+        paginationData.offset = 0
+        paginationData.refreshing = true
+        list.removeAll()
     }
     
 }

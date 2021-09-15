@@ -48,7 +48,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     private func launchMainProcess() {
         removeChildCoordinators()
 
-        guard let coordinator = AssemblerResolver.resolve(MainCoordinator.self) else { return }
+        guard let coordinator = assemblerResolver.resolve(MainCoordinator.self) else { return }
         start(coordinator: coordinator)
 
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: true)
@@ -71,7 +71,7 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     // MARK: - Splash Screen Implemententations -
     private func loadSplashScreen() {
         removeChildCoordinators()
-        guard let coordinator = AssemblerResolver.resolve(SplashCoordinator.self) else { return }
+        guard let coordinator = assemblerResolver.resolve(SplashCoordinator.self) else { return }
         start(coordinator: coordinator)
         
         coordinator.listenSplahCoordinatorFinishes(completion: commonApplicationLauncher).disposed(by: disposeBag)

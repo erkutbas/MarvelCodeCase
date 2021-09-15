@@ -18,8 +18,8 @@ class MainViewAssembler: Assembly {
         container.autoregister(MainViewModel.self, initializer: MainViewModel.init).inObjectScope(.container)
         container.autoregister(MainViewDataFormatter.self, initializer: MainViewDataImplementation.init).inObjectScope(.container)
         
-        container.autoregister(CharacterDataResponseCallBack.self, initializer: CharacterDataResponseCallBack.init).inObjectScope(.weak)
-        container.autoregister(CharactersDataUseCase.self, initializer: CharactersDataUseCase.init).inObjectScope(.weak)
+        container.autoregister(CharacterDataResponseCallBack.self, initializer: CharacterDataResponseCallBack.init).inObjectScope(.transient)
+        container.autoregister(CharactersDataUseCase.self, initializer: CharactersDataUseCase.init).inObjectScope(.transient)
 
     }
     

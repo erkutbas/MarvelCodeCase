@@ -15,8 +15,11 @@ enum MarvelCodeCaseColor: GenericValueProtocol {
         switch self {
         case .marvelRed:
             return #colorLiteral(red: 0.7843137255, green: 0.2117647059, blue: 0.2117647059, alpha: 1)
+        case .defaultBackground:
+            return #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
         }
     }
     
     case marvelRed
+    case defaultBackground
 }

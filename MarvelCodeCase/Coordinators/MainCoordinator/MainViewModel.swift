@@ -11,6 +11,7 @@ import RxSwift
 import NetworkEntityLayer
 
 typealias CollectionLoadingStateBlock = (CollectionLoadingState) -> Void
+typealias CollectionSelectedItemBlock = (Int) -> Void
 
 class MainViewModel: BaseViewModelDelegate {
 
@@ -18,8 +19,8 @@ class MainViewModel: BaseViewModelDelegate {
     
     private let disposeBag = DisposeBag()
     private var collectionState: CollectionLoadingStateBlock?
+    private var selectedItemBlock: CollectionSelectedItemBlock?
     
-    private var paginationInfo = PaginationInfo()
     private var mainViewDataFormatter: MainViewDataFormatter
     private let callBack: CharacterDataResponseCallBack
     private let characterListUseCase: CharactersDataUseCase
@@ -37,7 +38,7 @@ class MainViewModel: BaseViewModelDelegate {
             //updateCollectionState(with: .loading)
         }
         callBack.commonResult(completion: datalistener)
-        characterListUseCase.execute(useCaseCallBack: callBack, params: CharacterDataRequest())
+        characterListUseCase.execute(useCaseCallBack: callBack, params: CharacterDataRequest(offset: mainViewDataFormatter.paginationData.offset))
         
     }
     
@@ -45,17 +46,30 @@ class MainViewModel: BaseViewModelDelegate {
         collectionState = completion
     }
     
+    func refreshData() {
+        mainViewDataFormatter.refresh()
+        collectionState?(.done)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.getData()
+        }
+    }
+    
+    func listenSelectedItem(with completion: @escaping ((Int) -> Void)) {
+        selectedItemBlock = completion
+    }
+    
     // MARK: - Listeners
     private func listenerHandler(with result: Result<CharacterDataResponse, ErrorResponse>) {
         
-        paginationInfo.fetching = false
+        mainViewDataFormatter.paginationData.fetching = false
         
         switch result {
         case .failure(let error):
             print("error : \(error)")
         case .success(let response):
-            print("")
-            mainViewDataFormatter.data = response.data
+            print("response :\(response)")
+            mainViewDataFormatter.setData(with: response)
+            collectionState?(.done)
         }
     }
     
@@ -80,15 +94,18 @@ extension MainViewModel: ItemCollectionComponentDelegate {
     }
 
     func getMoreData() {
-        
+        guard mainViewDataFormatter.paginationData.checkLoadingMore() else { return }
+        mainViewDataFormatter.paginationData.nextOffset()
+        getData(with: true)
     }
 
     func isLoadingCell(for index: Int) -> Bool {
-        return false
+        print("isLoadingCell index : \(index)")
+        return index >= mainViewDataFormatter.getCount()
     }
 
     func selectedItem(at index: Int) {
-        
+        selectedItemBlock?(mainViewDataFormatter.getRawData(at: index).id)
     }
 
 }

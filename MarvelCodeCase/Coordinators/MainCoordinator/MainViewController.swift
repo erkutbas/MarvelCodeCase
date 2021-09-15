@@ -10,6 +10,8 @@ import RxSwift
 
 class MainViewController: BaseViewController<MainViewModel> {
     
+    weak var router: MainViewRouter?
+    
     private let disposeBag = DisposeBag()
     
     private var characterListComponent: ItemCollectionComponent!
@@ -17,9 +19,11 @@ class MainViewController: BaseViewController<MainViewModel> {
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         setupTitle()
+        appendRefreshButton()
         addCharacterListComponent()
         
         listenViewModelDataState()
+        listenViewModelSelectedData()
         
         viewModel.getData()
     }
@@ -33,7 +37,7 @@ class MainViewController: BaseViewController<MainViewModel> {
     private func addCharacterListComponent() {
         characterListComponent = ItemCollectionComponent()
         characterListComponent.translatesAutoresizingMaskIntoConstraints = false
-        //characterListComponent.setupDelegation(with: viewModel)
+        characterListComponent.setupDelegation(with: viewModel)
         
         view.addSubview(characterListComponent)
         
@@ -63,6 +67,18 @@ class MainViewController: BaseViewController<MainViewModel> {
         }
     }
     
+    private func listenViewModelSelectedData() {
+        viewModel.listenSelectedItem { [weak self] value in
+            self?.router?.pushDetail(with: value)
+        }
+    }
+    
+    private func appendRefreshButton() {
+        let barButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: .refreshTapped)
+        barButton.tintColor = .white
+        navigationItem.rightBarButtonItem = barButton
+    }
+    
     private func setupTitle() {
         view.backgroundColor = .white
         let navLabel = UILabel()
@@ -70,14 +86,20 @@ class MainViewController: BaseViewController<MainViewModel> {
                                                     .foregroundColor: UIColor.white,
                                                     .font: UIFont.systemFont(ofSize: 30.0, weight: UIFont.Weight.bold),
                                                     .kern: -4])
-
         navTitle.append(NSMutableAttributedString(string: " Character Explorer", attributes:[
                                                     .font: UIFont.boldSystemFont(ofSize: 16.0),
                                                     .foregroundColor: UIColor.white,
                                                     .kern: -0.75]))
-
         navLabel.attributedText = navTitle
         self.navigationItem.titleView = navLabel
     }
     
+    @objc fileprivate func refreshTapped(_ sender: UIBarButtonItem) {
+        viewModel.refreshData()
+    }
+    
+}
+
+fileprivate extension Selector {
+    static let refreshTapped = #selector(MainViewController.refreshTapped)
 }

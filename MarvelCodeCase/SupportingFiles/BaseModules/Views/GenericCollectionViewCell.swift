@@ -45,3 +45,4 @@ class GenericCollectionViewCell<DataType, ViewType: GenericBaseView<DataType>>: 
 //    }
     
 }
+

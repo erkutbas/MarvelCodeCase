@@ -15,7 +15,7 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController, Interactiv
     var initialInteractivePopGestureRecognizerDelegate: UIGestureRecognizerDelegate?
 
     var viewModel: T!
-
+    
     convenience init(viewModel: T) {
         self.init()
         self.viewModel = viewModel

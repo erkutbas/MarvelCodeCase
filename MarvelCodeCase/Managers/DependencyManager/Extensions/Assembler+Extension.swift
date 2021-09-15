@@ -18,7 +18,8 @@ extension Assembler {
                                    NetworkAssembler(),
                                    AppCoordinatorAssembler(),
                                    SplashViewAssembler(),
-                                   MainViewAssembler()],
+                                   MainViewAssembler(),
+                                   CharacterDetailAssembler()],
                                   container: container)
         return assembler
         

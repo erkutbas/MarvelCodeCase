@@ -1,5 +1,5 @@
 //
-//  ItemCollectionViewCell.swift
+//  ContentDisplayerCollectionViewCell.swift
 //  MarvelCodeCase
 //
 //  Created by Erkut Bas on 15.09.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ItemCollectionViewCell: GenericCollectionViewCell<GenericDataProtocol, CharacterView> {
+class ContentDisplayerCollectionViewCell: GenericCollectionViewCell<GenericDataProtocol, ContentDisplayerView> {
     
     override func setupView() {
         super.setupView()

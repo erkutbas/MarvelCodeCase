@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CharacterView: GenericBaseView<GenericDataProtocol> {
+class ContentDisplayerView: GenericBaseView<GenericDataProtocol> {
     
     private lazy var shadowContainerView: UIView = {
         let view = UIView()
@@ -25,6 +25,7 @@ class CharacterView: GenericBaseView<GenericDataProtocol> {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 6
         view.clipsToBounds = true
+        view.backgroundColor = MarvelCodeCaseColor.defaultBackground.value
         return view
     }()
     
@@ -32,18 +33,16 @@ class CharacterView: GenericBaseView<GenericDataProtocol> {
         let temp = UIStackView(arrangedSubviews: [imageContainer, infoView])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = true
-        temp.alignment = .center
+        temp.alignment = .fill
         temp.distribution = .fill
         temp.axis = .vertical
-        temp.spacing = 10
+        temp.spacing = 5
         return temp
     }()
     
     private lazy var imageContainer: CustomImageViewComponentContainer = {
         let temp = CustomImageViewComponentContainer()
         temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        temp.widthAnchor.constraint(equalToConstant: 50).isActive = true
         temp.layer.cornerRadius = 2
         temp.clipsToBounds = true
         return temp
@@ -52,6 +51,11 @@ class CharacterView: GenericBaseView<GenericDataProtocol> {
     private lazy var infoView: UILabel = {
         let temp = UILabel()
         temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.font = UIFont.boldSystemFont(ofSize: 14)
+        temp.textColor = .white
+        temp.text = " "
+        temp.contentMode = .top
+        temp.textAlignment = .left
         return temp
     }()
     
@@ -88,8 +92,10 @@ class CharacterView: GenericBaseView<GenericDataProtocol> {
     override func loadDataToView() {
         super.loadDataToView()
         
-        guard let data = returnData() as? CharacterViewData else { return }
+        guard let data = returnData() as? ContentDisplayerViewData else { return }
         imageContainer.setData(data: data.imageData)
+        infoView.text = data.name
+        infoView.isHidden = data.isInfoViewHidden
     }
     
 }
