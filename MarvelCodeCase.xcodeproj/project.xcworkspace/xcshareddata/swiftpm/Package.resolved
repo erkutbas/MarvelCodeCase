@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/erkutbas/MarvelDataLayer.git",
         "state": {
           "branch": null,
-          "revision": "11c684fe8cda3b0c92cf0f0197825de1bb76640e",
-          "version": "1.0.0"
+          "revision": "b042b1e82ed43225482baf168af03986a037ee82",
+          "version": "1.0.3"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/erkutbas/MarvelDomainLayer.git",
         "state": {
           "branch": null,
-          "revision": "e96afaecd142128f7f78e72eb9c9690e2614a2ab",
-          "version": "1.0.4"
+          "revision": "01d95bcbb947936ca7d7c7913bb4caa422bcb721",
+          "version": "1.0.5"
         }
       },
       {
@@ -42,8 +42,8 @@
         "repositoryURL": "https://github.com/erkutbas/NetworkLayer.git",
         "state": {
           "branch": null,
-          "revision": "31d9a4fdad798009619857d0202b6659bca31957",
-          "version": "1.0.0"
+          "revision": "1f1579a3a42be1ecb805549a1794a200289f7bba",
+          "version": "1.0.5"
         }
       },
       {

@@ -10,19 +10,24 @@ import MarvelDomainLayer
 import RxSwift
 import NetworkEntityLayer
 
+typealias CollectionLoadingStateBlock = (CollectionLoadingState) -> Void
+
 class MainViewModel: BaseViewModelDelegate {
-    
-    // Mark: - Observers -
-    private let disposeBag = DisposeBag()
-    
+
     var dismissInformer: PublishSubject<Void>?
     
+    private let disposeBag = DisposeBag()
+    private var collectionState: CollectionLoadingStateBlock?
+    
     private var paginationInfo = PaginationInfo()
+    private var mainViewDataFormatter: MainViewDataFormatter
     private let callBack: CharacterDataResponseCallBack
     private let characterListUseCase: CharactersDataUseCase
     
-    init(callBack: CharacterDataResponseCallBack,
+    init(mainViewDataFormatter: MainViewDataFormatter,
+         callBack: CharacterDataResponseCallBack,
          characterListUseCase: CharactersDataUseCase) {
+        self.mainViewDataFormatter = mainViewDataFormatter
         self.callBack = callBack
         self.characterListUseCase = characterListUseCase
     }
@@ -36,6 +41,10 @@ class MainViewModel: BaseViewModelDelegate {
         
     }
     
+    func listenCollectionState(completion: @escaping CollectionLoadingStateBlock) {
+        collectionState = completion
+    }
+    
     // MARK: - Listeners
     private func listenerHandler(with result: Result<CharacterDataResponse, ErrorResponse>) {
         
@@ -46,6 +55,7 @@ class MainViewModel: BaseViewModelDelegate {
             print("error : \(error)")
         case .success(let response):
             print("")
+            mainViewDataFormatter.data = response.data
         }
     }
     
@@ -56,29 +66,29 @@ class MainViewModel: BaseViewModelDelegate {
 }
 
 // MARK: - ItemCollectionComponentDelegate
-//extension MainViewModel: ItemCollectionComponentDelegate {
-//    func getNumberOfSection() -> Int {
-//        <#code#>
-//    }
-//
-//    func getItemCount(in section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func getData(at index: Int) -> GenericDataProtocol {
-//        <#code#>
-//    }
-//
-//    func getMoreData() {
-//        <#code#>
-//    }
-//
-//    func isLoadingCell(for index: Int) -> Bool {
-//        <#code#>
-//    }
-//
-//    func selectedItem(at index: Int) {
-//        <#code#>
-//    }
-//
-//}
+extension MainViewModel: ItemCollectionComponentDelegate {
+    func getNumberOfSection() -> Int {
+        return mainViewDataFormatter.getNumberOfSection()
+    }
+
+    func getItemCount(in section: Int) -> Int {
+        return mainViewDataFormatter.getNumbeOfItem(in: section)
+    }
+
+    func getData(at index: Int) -> GenericDataProtocol? {
+        return mainViewDataFormatter.getData(at: index)
+    }
+
+    func getMoreData() {
+        
+    }
+
+    func isLoadingCell(for index: Int) -> Bool {
+        return false
+    }
+
+    func selectedItem(at index: Int) {
+        
+    }
+
+}

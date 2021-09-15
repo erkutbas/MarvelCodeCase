@@ -14,7 +14,9 @@ extension Assembler {
        
         let container = Container()
         
-        let assembler = Assembler([AppCoordinatorAssembler(),
+        let assembler = Assembler([CharacterDataResponsibleAssember(),
+                                   NetworkAssembler(),
+                                   AppCoordinatorAssembler(),
                                    SplashViewAssembler(),
                                    MainViewAssembler()],
                                   container: container)

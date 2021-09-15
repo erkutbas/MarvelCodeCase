@@ -69,6 +69,12 @@
 		A75989E526F16F98008B11CF /* LoadingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989E426F16F98008B11CF /* LoadingCellView.swift */; };
 		A75989E826F173EC008B11CF /* MarvelDataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = A75989E726F173EC008B11CF /* MarvelDataLayer */; };
 		A75989EA26F177C6008B11CF /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989E926F177C6008B11CF /* PaginationInfo.swift */; };
+		A75989EC26F18167008B11CF /* MainViewDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989EB26F18167008B11CF /* MainViewDataFormatter.swift */; };
+		A75989EE26F1821E008B11CF /* MainViewDataImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989ED26F1821E008B11CF /* MainViewDataImplementation.swift */; };
+		A75989F026F188E2008B11CF /* CollectionLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989EF26F188E2008B11CF /* CollectionLoadingState.swift */; };
+		A75989F326F189CB008B11CF /* NetworkAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F226F189CB008B11CF /* NetworkAssembler.swift */; };
+		A75989F626F18D81008B11CF /* AccessProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F526F18D81008B11CF /* AccessProviderManager.swift */; };
+		A75989F926F190E3008B11CF /* CharacterDataResponsibleAssember.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F826F190E3008B11CF /* CharacterDataResponsibleAssember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +157,12 @@
 		A75989E026F16E2B008B11CF /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A75989E426F16F98008B11CF /* LoadingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellView.swift; sourceTree = "<group>"; };
 		A75989E926F177C6008B11CF /* PaginationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
+		A75989EB26F18167008B11CF /* MainViewDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataFormatter.swift; sourceTree = "<group>"; };
+		A75989ED26F1821E008B11CF /* MainViewDataImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDataImplementation.swift; sourceTree = "<group>"; };
+		A75989EF26F188E2008B11CF /* CollectionLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLoadingState.swift; sourceTree = "<group>"; };
+		A75989F226F189CB008B11CF /* NetworkAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembler.swift; sourceTree = "<group>"; };
+		A75989F526F18D81008B11CF /* AccessProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessProviderManager.swift; sourceTree = "<group>"; };
+		A75989F826F190E3008B11CF /* CharacterDataResponsibleAssember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataResponsibleAssember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +287,8 @@
 				A759899C26F13C3F008B11CF /* MainCoordinator.swift */,
 				A759899E26F13C46008B11CF /* MainViewModel.swift */,
 				A75989A026F13C4E008B11CF /* MainViewController.swift */,
+				A75989EB26F18167008B11CF /* MainViewDataFormatter.swift */,
+				A75989ED26F1821E008B11CF /* MainViewDataImplementation.swift */,
 			);
 			path = MainCoordinator;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 		A759894F26F13072008B11CF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A75989F426F18D6C008B11CF /* AccessProviderManager */,
 				A75989DB26F16C99008B11CF /* CacheManagers */,
 				A759895026F13072008B11CF /* DependencyManager */,
 			);
@@ -301,6 +316,8 @@
 		A759895126F13072008B11CF /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				A75989F726F19089008B11CF /* CharacterDataResponsibleAssember */,
+				A75989F126F189BC008B11CF /* NetworkAssemblers */,
 				A75989AE26F1423D008B11CF /* SplashViewAssembler */,
 				A75989AB26F141E8008B11CF /* AppCoordinatorAssembler */,
 				A759895226F13072008B11CF /* MainViewAssembler */,
@@ -396,6 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				A75989E926F177C6008B11CF /* PaginationInfo.swift */,
+				A75989EF26F188E2008B11CF /* CollectionLoadingState.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -548,6 +566,30 @@
 			path = CellLoadingComponent;
 			sourceTree = "<group>";
 		};
+		A75989F126F189BC008B11CF /* NetworkAssemblers */ = {
+			isa = PBXGroup;
+			children = (
+				A75989F226F189CB008B11CF /* NetworkAssembler.swift */,
+			);
+			path = NetworkAssemblers;
+			sourceTree = "<group>";
+		};
+		A75989F426F18D6C008B11CF /* AccessProviderManager */ = {
+			isa = PBXGroup;
+			children = (
+				A75989F526F18D81008B11CF /* AccessProviderManager.swift */,
+			);
+			path = AccessProviderManager;
+			sourceTree = "<group>";
+		};
+		A75989F726F19089008B11CF /* CharacterDataResponsibleAssember */ = {
+			isa = PBXGroup;
+			children = (
+				A75989F826F190E3008B11CF /* CharacterDataResponsibleAssember.swift */,
+			);
+			path = CharacterDataResponsibleAssember;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -698,6 +740,7 @@
 				A75989AD26F1420C008B11CF /* AppCoordinatorAssembler.swift in Sources */,
 				A759895626F13072008B11CF /* MainViewAssembler.swift in Sources */,
 				A759895F26F13079008B11CF /* BaseViewModelDelegate.swift in Sources */,
+				A75989EC26F18167008B11CF /* MainViewDataFormatter.swift in Sources */,
 				A75989C026F161F3008B11CF /* ItemCollectionComponentDelegate.swift in Sources */,
 				A75989D126F16B34008B11CF /* CharacterView.swift in Sources */,
 				A75989D826F16C21008B11CF /* CustomImageViewComponentData.swift in Sources */,
@@ -707,6 +750,7 @@
 				A759898426F13485008B11CF /* GenericCollectionViewCell.swift in Sources */,
 				A759899526F13A8B008B11CF /* InteractivePopGestureDelegate.swift in Sources */,
 				A75989AA26F14127008B11CF /* AssemblerResolverDelegate.swift in Sources */,
+				A75989F326F189CB008B11CF /* NetworkAssembler.swift in Sources */,
 				A75989A126F13C4E008B11CF /* MainViewController.swift in Sources */,
 				A759897F26F13485008B11CF /* GenericBaseView.swift in Sources */,
 				A75989D726F16C21008B11CF /* CustomImageViewComponentContainer.swift in Sources */,
@@ -722,6 +766,8 @@
 				A75989CC26F16A57008B11CF /* GenericDataProtocol.swift in Sources */,
 				A759899926F13BA9008B11CF /* AppCoordinator.swift in Sources */,
 				A759898B26F13637008B11CF /* BaseRouter.swift in Sources */,
+				A75989EE26F1821E008B11CF /* MainViewDataImplementation.swift in Sources */,
+				A75989F926F190E3008B11CF /* CharacterDataResponsibleAssember.swift in Sources */,
 				A759897E26F13485008B11CF /* BaseViewController.swift in Sources */,
 				A759896026F13079008B11CF /* BaseCoordinator.swift in Sources */,
 				A75989BA26F15C4F008B11CF /* MarvelCodeCaseColor.swift in Sources */,
@@ -733,7 +779,9 @@
 				A759898026F13485008B11CF /* BaseView.swift in Sources */,
 				A75989B026F14252008B11CF /* SplashViewAssembler.swift in Sources */,
 				A75989E526F16F98008B11CF /* LoadingCellView.swift in Sources */,
+				A75989F026F188E2008B11CF /* CollectionLoadingState.swift in Sources */,
 				A759898226F13485008B11CF /* BaseCollectionViewCell.swift in Sources */,
+				A75989F626F18D81008B11CF /* AccessProviderManager.swift in Sources */,
 				A759897526F131A2008B11CF /* SplashViewController.swift in Sources */,
 				A75989DD26F16CA6008B11CF /* ImageCacheManager.swift in Sources */,
 				A759898326F13485008B11CF /* GenericTableViewCell.swift in Sources */,

@@ -7,33 +7,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "13A639E0-943B-4724-B603-C5B102BFEFA3"
+            uuid = "55470A4A-C489-4F66-BB85-99AD3C28F4D5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MarvelCodeCase/Coordinators/AppCoordinator/AppCoordinator.swift"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "launchMainProcess()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "executeRequest(urlRequestConvertible:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55470A4A-C489-4F66-BB85-99AD3C28F4D5 - d0d191fe9159126a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkLayer.ApiManager.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlRequestConvertible: Alamofire.URLRequestConvertible) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, &#x3c4;_0_0&gt;"
+                  moduleName = "MarvelCodeCase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "55470A4A-C489-4F66-BB85-99AD3C28F4D5 - 8b1c67fb2aab9866"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; RxSwift.Disposable in NetworkLayer.ApiManager.executeRequest&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(urlRequestConvertible: Alamofire.URLRequestConvertible) -&gt; RxSwift.PrimitiveSequence&lt;RxSwift.SingleTrait, &#x3c4;_0_0&gt;"
+                  moduleName = "MarvelCodeCase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2A94B68-0807-4663-B349-FA267772F0B2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "responseParser(alamofireResponseData:single:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84AB5F98-E16D-49A3-90DB-6C711D107AF3"
+            uuid = "833E4ED8-D82F-4DC1-927D-88FEDA0739D9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MarvelCodeCase/Utilities/ViewControllerUtils/ViewControllerUtils.swift"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiAdapter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "setRootViewController(window:viewController:withAnimation:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "adapt(_:for:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46209DAA-36A3-490C-85D1-1FBB5F65722C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "responseParser(alamofireResponseData:single:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFB2ED2A-3029-491B-87A6-6EC1C1EF4B95"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "responseParser(alamofireResponseData:single:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E99F59A-7707-49BE-8823-AA63689400C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "responseParser(alamofireResponseData:single:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9334F30E-643D-4795-B9F5-38EB1C21E07A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "responseParser(alamofireResponseData:single:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9334F30E-643D-4795-B9F5-38EB1C21E07A - 74b9deb032e4cc10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkLayer.ApiManager.responseParser&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(alamofireResponseData: Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;, single: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MarvelCodeCase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1312">
+               </Location>
+               <Location
+                  uuid = "9334F30E-643D-4795-B9F5-38EB1C21E07A - 74b9deb032e4cc10"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NetworkLayer.ApiManager.responseParser&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable, &#x3c4;_0_0: Swift.Encodable&gt;(alamofireResponseData: Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;, single: (Swift.Result&lt;&#x3c4;_0_0, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MarvelCodeCase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/erkutbas/Library/Developer/Xcode/DerivedData/MarvelCodeCase-gruqsmbutrsehpfxgsnotxpsortw/SourcePackages/checkouts/NetworkLayer/Sources/NetworkLayer/Modules/ApiManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1436">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

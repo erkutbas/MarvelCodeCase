@@ -14,16 +14,20 @@ class MainViewController: BaseViewController<MainViewModel> {
     
     private var characterListComponent: ItemCollectionComponent!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setTintColor(.white)
-        navigationController?.backgroundColor(MarvelCodeCaseColor.marvelRed.value)
-    }
-    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         setupTitle()
         addCharacterListComponent()
+        
+        listenViewModelDataState()
+        
+        viewModel.getData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setTintColor(.white)
+        navigationController?.backgroundColor(MarvelCodeCaseColor.marvelRed.value)
     }
     
     private func addCharacterListComponent() {
@@ -41,6 +45,22 @@ class MainViewController: BaseViewController<MainViewModel> {
             characterListComponent.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         
         ])
+    }
+    
+    private func listenViewModelDataState() {
+        viewModel.listenCollectionState { [weak self](state) in
+            switch state {
+            case .done:
+                self?.characterListComponent.reloadCollectionComponent()
+//                self?.dimmingView.activationManager(activate: false)
+            case .loading:
+                break
+//                self?.dimmingView.activationManager(activate: true)
+            case .reloadIndex(let indexPath):
+                self?.characterListComponent
+                    .reloadItem(at: indexPath)
+            }
+        }
     }
     
     private func setupTitle() {
