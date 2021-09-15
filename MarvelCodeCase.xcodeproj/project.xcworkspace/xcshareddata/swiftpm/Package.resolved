@@ -1,0 +1,97 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
+        }
+      },
+      {
+        "package": "CredentialManagement",
+        "repositoryURL": "https://github.com/erkutbas0/CredentialManagement.git",
+        "state": {
+          "branch": null,
+          "revision": "101f40774d1892bd7f464f4ff78708e9a8a3729e",
+          "version": "1.0.3"
+        }
+      },
+      {
+        "package": "DataLayerPackage",
+        "repositoryURL": "https://github.com/erkutbas0/DataLayerPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "275cd73c86baec561ddc400e7e93ee7577aea274",
+          "version": "1.0.31"
+        }
+      },
+      {
+        "package": "DomainLayerPackage",
+        "repositoryURL": "https://github.com/erkutbas0/DomainLayerPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "eb934c615ae384804ac0d22fe8767dbd8b4ec23a",
+          "version": "1.0.34"
+        }
+      },
+      {
+        "package": "NetworkEntityPackage",
+        "repositoryURL": "https://github.com/erkutbas0/NetworkEntityPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "dc9e9fcd4089cf390393fac5365a0b61c73b1c4f",
+          "version": "1.0.4"
+        }
+      },
+      {
+        "package": "NetworkLayerPackage",
+        "repositoryURL": "https://github.com/erkutbas0/NetworkLayerPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "6327030312d3b55e8957a3b2c6528d444738f525",
+          "version": "1.2.9"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "7c17a6ccca06b5c107cfa4284e634562ddaf5951",
+          "version": "6.2.0"
+        }
+      },
+      {
+        "package": "Swinject",
+        "repositoryURL": "https://github.com/Swinject/Swinject.git",
+        "state": {
+          "branch": null,
+          "revision": "b1d92a53159fe45e162c307183aec9be15e4e7ae",
+          "version": "2.8.0"
+        }
+      },
+      {
+        "package": "SwinjectAutoregistration",
+        "repositoryURL": "https://github.com/Swinject/SwinjectAutoregistration.git",
+        "state": {
+          "branch": null,
+          "revision": "136e57231434d038c3beef939e81f60f36ec8aec",
+          "version": "2.7.0"
+        }
+      },
+      {
+        "package": "Valet",
+        "repositoryURL": "https://github.com/square/Valet.git",
+        "state": {
+          "branch": null,
+          "revision": "2bf3329055f5d71d42a12801dd69d1d770fafa5e",
+          "version": "4.1.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
