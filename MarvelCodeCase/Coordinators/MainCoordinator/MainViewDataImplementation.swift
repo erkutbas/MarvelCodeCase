@@ -15,7 +15,11 @@ class MainViewDataImplementation: MainViewDataFormatter {
     var paginationData: PaginationInfo = PaginationInfo()
     
     func getData(at index: Int) -> ContentDisplayerViewData? {
-        return ContentDisplayerViewData(imageData: CustomImageViewComponentData(imageUrl: list[index].thumbnail.imageContentCreator()), name: list[index].name)
+        guard index < list.count else {
+            return nil
+        }
+        let data = list[index]
+        return ContentDisplayerViewData(imageData: CustomImageViewComponentData(imageUrl: data.thumbnail.imageContentCreator()), name: data.name)
     }
     
     func getRawData(at index: Int) -> CharacterData {
@@ -40,6 +44,10 @@ class MainViewDataImplementation: MainViewDataFormatter {
         self.paginationData.resultCount = data.count
         self.paginationData.refreshing = false
         self.list.append(contentsOf: response.data.results)
+    }
+    
+    func setData(with list: [CharacterData]) {
+        self.list = list
     }
     
     func refresh() {

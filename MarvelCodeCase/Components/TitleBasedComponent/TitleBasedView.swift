@@ -20,12 +20,23 @@ class TitleBasedView: GenericBaseView<TitleBasedViewData> {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [title, subTitle])
+        let temp = UIStackView(arrangedSubviews: [headerStackView, subTitle])
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = true
         temp.alignment = .fill
         temp.distribution = .fill
         temp.axis = .vertical
+        temp.spacing = 5
+        return temp
+    }()
+    
+    private lazy var headerStackView: UIStackView = {
+        let temp = UIStackView(arrangedSubviews: [title, favouriteButton])
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.isUserInteractionEnabled = true
+        temp.alignment = .center
+        temp.distribution = .fill
+        temp.axis = .horizontal
         temp.spacing = 5
         return temp
     }()
@@ -39,6 +50,12 @@ class TitleBasedView: GenericBaseView<TitleBasedViewData> {
         temp.numberOfLines = 0
         temp.contentMode = .center
         temp.textAlignment = .left
+        return temp
+    }()
+    
+    private lazy var favouriteButton: FavouriteButtonView = {
+        let temp = FavouriteButtonView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
         return temp
     }()
     
@@ -86,10 +103,20 @@ class TitleBasedView: GenericBaseView<TitleBasedViewData> {
         title.text = data.title
         title.font = data.font
         
-        guard let subTitleData = data.subTitle else { return }
+        setupSubTitle()
+        setupFavouriteButton()
+    }
+    
+    private func setupSubTitle() {
+        guard let data = returnData(), let subTitleData = data.subTitle else { return }
         subTitle.text = subTitleData
         subTitle.font = data.subTitleFont
         subTitle.isHidden = false
+    }
+    
+    private func setupFavouriteButton() {
+        guard let data = returnData(), let favouriteButtonData = data.favouriteButtonData else { return }
+        favouriteButton.setData(data: favouriteButtonData)
     }
     
 }

@@ -14,7 +14,9 @@ extension Assembler {
        
         let container = Container()
         
-        let assembler = Assembler([CharacterDataResponsibleAssember(),
+        let assembler = Assembler([FavouritesAssembler(),
+                                   ClientSideAssembler(),
+                                   CharacterDataResponsibleAssember(),
                                    NetworkAssembler(),
                                    AppCoordinatorAssembler(),
                                    SplashViewAssembler(),

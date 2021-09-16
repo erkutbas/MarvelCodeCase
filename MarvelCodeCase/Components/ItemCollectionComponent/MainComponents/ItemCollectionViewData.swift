@@ -9,4 +9,10 @@ import Foundation
 
 class ItemCollectionViewData {
     
+    private(set) var isRefreshingSupported: Bool = false
+    
+    init(isRefreshingSupported: Bool = false) {
+        self.isRefreshingSupported = isRefreshingSupported
+    }
+    
 }

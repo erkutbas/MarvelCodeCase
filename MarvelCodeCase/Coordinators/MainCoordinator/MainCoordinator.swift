@@ -24,12 +24,22 @@ class MainCoordinator: BaseCoordinator<MainViewModel> {
         self.navigationController.pushViewController(characterDetailCoordinator.viewContoller, animated: true)
     }
     
+    private func forwardFavouritesCoordinator() {
+        guard let favouritesCoordinator = assemblerResolver.resolve(FavouritesCoordinator.self) else { return }
+        start(coordinator: favouritesCoordinator)
+        self.navigationController.pushViewController(favouritesCoordinator.viewContoller, animated: true)
+    }
+    
 }
 
 extension MainCoordinator: MainViewRouter {
     
     func pushDetail(with id: Int) {
         forwardCharacterDetailCoordinator(with: id)
+    }
+    
+    func pushFavourites() {
+        forwardFavouritesCoordinator()
     }
     
 }

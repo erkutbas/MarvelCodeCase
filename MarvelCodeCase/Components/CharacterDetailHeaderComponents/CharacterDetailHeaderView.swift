@@ -30,7 +30,7 @@ class CharacterDetailHeaderView: GenericBaseView<CharacterDetailHeaderViewData> 
             imageContainer.topAnchor.constraint(equalTo: topAnchor),
             imageContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
             imageContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageContainer.trailingAnchor.constraint(equalTo: trailingAnchor)
+            imageContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
         
         ])
     }

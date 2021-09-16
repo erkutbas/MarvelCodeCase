@@ -16,7 +16,7 @@ class MainViewAssembler: Assembly {
     
         container.autoregister(MainCoordinator.self, initializer: MainCoordinator.init).inObjectScope(.container)
         container.autoregister(MainViewModel.self, initializer: MainViewModel.init).inObjectScope(.container)
-        container.autoregister(MainViewDataFormatter.self, initializer: MainViewDataImplementation.init).inObjectScope(.container)
+        container.autoregister(MainViewDataFormatter.self, initializer: MainViewDataImplementation.init).inObjectScope(.transient)
         
         container.autoregister(CharacterDataResponseCallBack.self, initializer: CharacterDataResponseCallBack.init).inObjectScope(.transient)
         container.autoregister(CharactersDataUseCase.self, initializer: CharactersDataUseCase.init).inObjectScope(.transient)

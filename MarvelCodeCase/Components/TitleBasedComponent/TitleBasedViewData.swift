@@ -13,6 +13,7 @@ class TitleBasedViewData {
     private(set) var font: UIFont = UIFont.systemFont(ofSize: 20, weight: .semibold)
     private(set) var subTitle: String?
     private(set) var subTitleFont: UIFont = UIFont.systemFont(ofSize: 16, weight: .regular)
+    private(set) var favouriteButtonData: FavouriteButtonViewData?
     
     init(title: String,
          font: UIFont = UIFont.systemFont(ofSize: 20, weight: .semibold),
@@ -24,6 +25,11 @@ class TitleBasedViewData {
         self.subTitle = subTitle
         self.subTitleFont = subTitleFont
         
+    }
+    
+    func setFavouriteButtonViewData(by value: FavouriteButtonViewData) -> Self {
+        favouriteButtonData = value
+        return self
     }
     
 }

@@ -38,19 +38,20 @@
         <!--View Controller-->
         <scene sceneID="SVO-aK-NOr">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9V4-UY-aH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="njY-BD-GkQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4zF-a2-bTF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zc4-wW-Kgl">
-                                <rect key="frame" x="44" y="149" width="300" height="480.5"/>
+                                <rect key="frame" x="44" y="149" width="41.5" height="50.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deneme" translatesAutoresizingMaskIntoConstraints="NO" id="844-2u-kB9">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="450"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="844-2u-kB9">
+                                        <rect key="frame" x="0.0" y="0.5" width="41.5" height="19"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvt-Wu-lf0">
-                                        <rect key="frame" x="0.0" y="460" width="300" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="41.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,14 +63,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9V4-UY-aH8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="447"/>
         </scene>
     </scenes>
     <resources>
-        <image name="deneme" width="300" height="450"/>
         <image name="marvel" width="600" height="900"/>
+        <image name="star.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -30,6 +30,17 @@ class ItemCollectionComponent: GenericBaseView<ItemCollectionViewData> {
         return collection
     }()
     
+    private lazy var pullToRefresh: UIRefreshControl = {
+        let temp = UIRefreshControl()
+        temp.addTarget(self, action: .pullToRefreshAction, for: .valueChanged)
+        return temp
+    }()
+
+    override func setupViews() {
+        super.setupViews()
+        addPullToRefresh()
+    }
+    
     override func addMajorFields() {
         super.addMajorFields()
         addCollectionView()
@@ -49,12 +60,19 @@ class ItemCollectionComponent: GenericBaseView<ItemCollectionViewData> {
         
     }
     
+    func addPullToRefresh() {
+        guard let data = returnData(), data.isRefreshingSupported else { return }
+        collectionView.refreshControl = pullToRefresh
+        
+    }
+    
     func setupDelegation(with delegate: ItemCollectionComponentDelegate) {
         self.delegate = delegate
     }
     
     func reloadCollectionComponent() {
         DispatchQueue.main.async { [weak self] in
+            self?.pullToRefresh.endRefreshing()
             self?.collectionView.reloadData()
         }
     }
@@ -71,8 +89,16 @@ class ItemCollectionComponent: GenericBaseView<ItemCollectionViewData> {
     
     func reloadItem(at indexPath: IndexPath) {
         collectionView.performBatchUpdates { [weak self] in
-            self?.collectionView.reloadItems(at: [indexPath])
+            //self?.collectionView.reloadItems(at: [indexPath])
+            self?.collectionView.scrollToItem(at: indexPath, at: .top, animated: true)
         }
+    }
+    
+    @objc fileprivate func pullToRefreshAction(_ sender: UIRefreshControl) {
+        pullToRefresh.beginRefreshing()
+        print("pullToRefresh.isRefreshing : \(pullToRefresh.isRefreshing)")
+        guard pullToRefresh.isRefreshing else { return }
+        delegate?.refreshCollectionView()
     }
     
 }
@@ -127,4 +153,9 @@ extension ItemCollectionComponent: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width, height: 250)
     }
     
+}
+
+// MARK: - Selector
+fileprivate extension Selector {
+    static let pullToRefreshAction = #selector(ItemCollectionComponent.pullToRefreshAction)
 }

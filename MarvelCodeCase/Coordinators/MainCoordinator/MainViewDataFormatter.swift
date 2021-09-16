@@ -26,4 +26,6 @@ protocol MainViewDataFormatter {
     
     func setData(with response: CharacterDataResponse)
     
+    func setData(with list: [CharacterData])
+    
 }

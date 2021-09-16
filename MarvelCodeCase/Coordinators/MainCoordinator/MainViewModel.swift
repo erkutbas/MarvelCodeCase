@@ -16,6 +16,7 @@ typealias CollectionSelectedItemBlock = (Int) -> Void
 class MainViewModel: BaseViewModelDelegate {
 
     var dismissInformer: PublishSubject<Void>?
+    var externalRefresh: Bool = false
     
     private let disposeBag = DisposeBag()
     private var collectionState: CollectionLoadingStateBlock?
@@ -46,9 +47,9 @@ class MainViewModel: BaseViewModelDelegate {
         collectionState = completion
     }
     
-    func refreshData() {
+    func refreshData(with externalRefresh: Bool = false) {
+        self.externalRefresh = externalRefresh
         mainViewDataFormatter.refresh()
-        collectionState?(.done)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.getData()
         }
@@ -69,7 +70,8 @@ class MainViewModel: BaseViewModelDelegate {
         case .success(let response):
             print("response :\(response)")
             mainViewDataFormatter.setData(with: response)
-            collectionState?(.done)
+            collectionState?(externalRefresh ? .reloadIndex(IndexPath(item: 0, section: 0)) : .done)
+            externalRefresh = false
         }
     }
     
@@ -106,6 +108,10 @@ extension MainViewModel: ItemCollectionComponentDelegate {
 
     func selectedItem(at index: Int) {
         selectedItemBlock?(mainViewDataFormatter.getRawData(at: index).id)
+    }
+    
+    func refreshCollectionView() {
+        self.refreshData()
     }
 
 }

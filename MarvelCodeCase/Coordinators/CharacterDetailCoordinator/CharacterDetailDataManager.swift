@@ -15,22 +15,26 @@ typealias CharacterDetailDataBlock = (CharacterDetailViewData) -> Void
 class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
     
     private var data = CharacterDetailViewData()
+    private var characterData: CharacterData?
     private var dataBlock: CharacterDetailDataBlock?
     
     private let callBack: CharacterDataResponseCallBack
     private let characterDetailUseCase: CharacterDetailUseCase
     private let comicsCallBack: ComiscDataCallBack
     private let comicsDataUseCase: ComicsDataUseCase
+    private let persistencyManager: PersistencyDataProtocol
     
     init(callBack: CharacterDataResponseCallBack,
          characterDetailUseCase: CharacterDetailUseCase,
          comicsCallBack: ComiscDataCallBack,
-         comicsDataUseCase: ComicsDataUseCase) {
+         comicsDataUseCase: ComicsDataUseCase,
+         persistencyManager: PersistencyDataProtocol) {
         
         self.callBack = callBack
         self.characterDetailUseCase = characterDetailUseCase
         self.comicsCallBack = comicsCallBack
         self.comicsDataUseCase = comicsDataUseCase
+        self.persistencyManager = persistencyManager
         
     }
     
@@ -49,6 +53,7 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
     }
     
     private func dataConverter(from response: CharacterDataResponse) {
+        characterData = response.data.results[0]
         DispatchQueue.main.async {
             self.dataSetter(with: response)
         }
@@ -71,12 +76,13 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
     }
     
     private func returnImageViewData(from response: CharacterDataResponse) -> CharacterDetailHeaderViewData {
-        return CharacterDetailHeaderViewData(imageContainerData: CustomImageViewComponentData(imageUrl: response.data.results[0].thumbnail.imageContentCreator()))
+        let data = response.data.results[0]
+        return CharacterDetailHeaderViewData(imageContainerData: CustomImageViewComponentData(imageUrl: data.thumbnail.imageContentCreator()))
     }
     
     private func returnTitleBasedViewData(from response: CharacterDataResponse) -> [TitleBasedViewData] {
         let data = response.data.results[0]
-        return [TitleBasedViewData(title: data.name, subTitle: data.description)]
+        return [TitleBasedViewData(title: data.name, subTitle: data.description).setFavouriteButtonViewData(by: FavouriteButtonViewData(state: persistencyManager.checkExists(with: data), isFavouriteBlock: favouriteActionListener))]
     }
     
     private func comicsMapper(from response: ComicsDataResponse) {
@@ -85,6 +91,16 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
         DispatchQueue.main.async {
             self.dataBlock?(self.data)
         }
+    }
+    
+    private func favoriteItemOperations(with value: Bool) {
+        guard let item = characterData else { return }
+        value ? persistencyManager.addFavorite(with: item) : persistencyManager.removeFavourite(with: item)
+    }
+    
+    // MARK: - Listeners
+    private lazy var favouriteActionListener: BooleanCompletionBlock = { [weak self] value in
+        self?.favoriteItemOperations(with: value)
     }
     
     private lazy var dataCallBackListener : (Result<CharacterDataResponse, ErrorResponse>) -> Void = { [weak self] result in

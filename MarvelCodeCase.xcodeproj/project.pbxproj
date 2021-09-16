@@ -99,6 +99,16 @@
 		A7B5B06E26F28EBB008CFC7E /* CharacterDetailFooterResuableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B06D26F28EBB008CFC7E /* CharacterDetailFooterResuableView.swift */; };
 		A7B5B07126F2A279008CFC7E /* TitleContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07026F2A279008CFC7E /* TitleContainerView.swift */; };
 		A7B5B07326F2A297008CFC7E /* TitleContainerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07226F2A297008CFC7E /* TitleContainerViewData.swift */; };
+		A7B5B07626F2AE5B008CFC7E /* FavouriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07526F2AE5B008CFC7E /* FavouriteButtonView.swift */; };
+		A7B5B07826F2AE60008CFC7E /* FavouriteButtonViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07726F2AE60008CFC7E /* FavouriteButtonViewData.swift */; };
+		A7B5B07B26F2BB67008CFC7E /* PersistencyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07A26F2BB67008CFC7E /* PersistencyDataManager.swift */; };
+		A7B5B07D26F2BB93008CFC7E /* PersistencyDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07C26F2BB93008CFC7E /* PersistencyDataProtocol.swift */; };
+		A7B5B08026F2C436008CFC7E /* ClientSideAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B07F26F2C436008CFC7E /* ClientSideAssembler.swift */; };
+		A7B5B08326F2CB45008CFC7E /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B08226F2CB45008CFC7E /* FavouritesCoordinator.swift */; };
+		A7B5B08526F2CB61008CFC7E /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B08426F2CB61008CFC7E /* FavouritesViewModel.swift */; };
+		A7B5B08726F2CB7B008CFC7E /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B08626F2CB7B008CFC7E /* FavouritesViewController.swift */; };
+		A7B5B08A26F2CD18008CFC7E /* FavouritesAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B08926F2CD18008CFC7E /* FavouritesAssembler.swift */; };
+		A7B5B08C26F2D2BC008CFC7E /* FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B08B26F2D2BC008CFC7E /* FavouritesRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +221,16 @@
 		A7B5B06D26F28EBB008CFC7E /* CharacterDetailFooterResuableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailFooterResuableView.swift; sourceTree = "<group>"; };
 		A7B5B07026F2A279008CFC7E /* TitleContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleContainerView.swift; sourceTree = "<group>"; };
 		A7B5B07226F2A297008CFC7E /* TitleContainerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleContainerViewData.swift; sourceTree = "<group>"; };
+		A7B5B07526F2AE5B008CFC7E /* FavouriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButtonView.swift; sourceTree = "<group>"; };
+		A7B5B07726F2AE60008CFC7E /* FavouriteButtonViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButtonViewData.swift; sourceTree = "<group>"; };
+		A7B5B07A26F2BB67008CFC7E /* PersistencyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyDataManager.swift; sourceTree = "<group>"; };
+		A7B5B07C26F2BB93008CFC7E /* PersistencyDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyDataProtocol.swift; sourceTree = "<group>"; };
+		A7B5B07F26F2C436008CFC7E /* ClientSideAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientSideAssembler.swift; sourceTree = "<group>"; };
+		A7B5B08226F2CB45008CFC7E /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
+		A7B5B08426F2CB61008CFC7E /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		A7B5B08626F2CB7B008CFC7E /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		A7B5B08926F2CD18008CFC7E /* FavouritesAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesAssembler.swift; sourceTree = "<group>"; };
+		A7B5B08B26F2D2BC008CFC7E /* FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +322,7 @@
 		A759894726F1306A008B11CF /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5B08126F2CB22008CFC7E /* FavouritesCoordinator */,
 				A7B5B03326F21192008CFC7E /* CharacterDetailCoordinator */,
 				A759894826F1306A008B11CF /* SplashCoordinator */,
 				A759894A26F1306A008B11CF /* AppCoordinator */,
@@ -346,6 +367,7 @@
 		A759894F26F13072008B11CF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5B07926F2BB5D008CFC7E /* PersistenceManager */,
 				A75989F426F18D6C008B11CF /* AccessProviderManager */,
 				A75989DB26F16C99008B11CF /* CacheManagers */,
 				A759895026F13072008B11CF /* DependencyManager */,
@@ -366,6 +388,8 @@
 		A759895126F13072008B11CF /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5B08826F2CD03008CFC7E /* FavouritesAssemblers */,
+				A7B5B07E26F2C423008CFC7E /* ClientSideAssemblers */,
 				A7B5B03A26F21253008CFC7E /* CharacterDetailAssembler */,
 				A75989F726F19089008B11CF /* CharacterDataResponsibleAssember */,
 				A75989F126F189BC008B11CF /* NetworkAssemblers */,
@@ -541,6 +565,7 @@
 		A75989BB26F161CC008B11CF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A7B5B07426F2AE48008CFC7E /* FavouriteButtonComponent */,
 				A7B5B06F26F2A262008CFC7E /* TitleContainerComponent */,
 				A7B5B06A26F28E0C008CFC7E /* CharacterDetailFooterComponents */,
 				A7B5B06326F28375008CFC7E /* ComicsComponent */,
@@ -742,6 +767,51 @@
 			path = TitleContainerComponent;
 			sourceTree = "<group>";
 		};
+		A7B5B07426F2AE48008CFC7E /* FavouriteButtonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5B07526F2AE5B008CFC7E /* FavouriteButtonView.swift */,
+				A7B5B07726F2AE60008CFC7E /* FavouriteButtonViewData.swift */,
+			);
+			path = FavouriteButtonComponent;
+			sourceTree = "<group>";
+		};
+		A7B5B07926F2BB5D008CFC7E /* PersistenceManager */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5B07A26F2BB67008CFC7E /* PersistencyDataManager.swift */,
+				A7B5B07C26F2BB93008CFC7E /* PersistencyDataProtocol.swift */,
+			);
+			path = PersistenceManager;
+			sourceTree = "<group>";
+		};
+		A7B5B07E26F2C423008CFC7E /* ClientSideAssemblers */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5B07F26F2C436008CFC7E /* ClientSideAssembler.swift */,
+			);
+			path = ClientSideAssemblers;
+			sourceTree = "<group>";
+		};
+		A7B5B08126F2CB22008CFC7E /* FavouritesCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5B08226F2CB45008CFC7E /* FavouritesCoordinator.swift */,
+				A7B5B08426F2CB61008CFC7E /* FavouritesViewModel.swift */,
+				A7B5B08626F2CB7B008CFC7E /* FavouritesViewController.swift */,
+				A7B5B08B26F2D2BC008CFC7E /* FavouritesRouter.swift */,
+			);
+			path = FavouritesCoordinator;
+			sourceTree = "<group>";
+		};
+		A7B5B08826F2CD03008CFC7E /* FavouritesAssemblers */ = {
+			isa = PBXGroup;
+			children = (
+				A7B5B08926F2CD18008CFC7E /* FavouritesAssembler.swift */,
+			);
+			path = FavouritesAssemblers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -899,6 +969,7 @@
 				A7B5B05926F265A4008CFC7E /* TitleBasedView.swift in Sources */,
 				A7B5B03926F211F3008CFC7E /* CharacterDetailViewController.swift in Sources */,
 				A75989D826F16C21008B11CF /* CustomImageViewComponentData.swift in Sources */,
+				A7B5B08326F2CB45008CFC7E /* FavouritesCoordinator.swift in Sources */,
 				A759891D26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld in Sources */,
 				A7B5B06226F2684F008CFC7E /* CharacterDetailInfoCellView.swift in Sources */,
 				A759898D26F138DE008B11CF /* SplashCoordinator.swift in Sources */,
@@ -919,6 +990,7 @@
 				A759898126F13485008B11CF /* BaseTableViewCell.swift in Sources */,
 				A759891326F1302E008B11CF /* AppDelegate.swift in Sources */,
 				A75989A526F140AA008B11CF /* ViewControllerUtils.swift in Sources */,
+				A7B5B07B26F2BB67008CFC7E /* PersistencyDataManager.swift in Sources */,
 				A7B5B06E26F28EBB008CFC7E /* CharacterDetailFooterResuableView.swift in Sources */,
 				A75989C826F16A15008B11CF /* UICollectionView+Extension.swift in Sources */,
 				A759898626F134DB008B11CF /* SplashViewModel.swift in Sources */,
@@ -933,6 +1005,7 @@
 				A75989EE26F1821E008B11CF /* MainViewDataImplementation.swift in Sources */,
 				A7B5B04126F22205008CFC7E /* CharacterDetailHeaderView.swift in Sources */,
 				A75989F926F190E3008B11CF /* CharacterDataResponsibleAssember.swift in Sources */,
+				A7B5B08026F2C436008CFC7E /* ClientSideAssembler.swift in Sources */,
 				A7B5B04C26F2274E008CFC7E /* BaseCollectionReusableView.swift in Sources */,
 				A759897E26F13485008B11CF /* BaseViewController.swift in Sources */,
 				A7B5B04826F22308008CFC7E /* CharacterDetailViewData.swift in Sources */,
@@ -942,6 +1015,7 @@
 				A75989DA26F16C21008B11CF /* CustomImageLoadingType.swift in Sources */,
 				A7B5B06726F28390008CFC7E /* ComicsView.swift in Sources */,
 				A75989D926F16C21008B11CF /* CustomImageViewComponent.swift in Sources */,
+				A7B5B08C26F2D2BC008CFC7E /* FavouritesRouter.swift in Sources */,
 				A7B5B05626F26235008CFC7E /* Thumbnail+Extension.swift in Sources */,
 				A759899F26F13C46008B11CF /* MainViewModel.swift in Sources */,
 				A75989CA26F16A2E008B11CF /* UIView+Extension.swift in Sources */,
@@ -954,7 +1028,10 @@
 				A759898226F13485008B11CF /* BaseCollectionViewCell.swift in Sources */,
 				A75989F626F18D81008B11CF /* AccessProviderManager.swift in Sources */,
 				A759897526F131A2008B11CF /* SplashViewController.swift in Sources */,
+				A7B5B08A26F2CD18008CFC7E /* FavouritesAssembler.swift in Sources */,
 				A75989DD26F16CA6008B11CF /* ImageCacheManager.swift in Sources */,
+				A7B5B07626F2AE5B008CFC7E /* FavouriteButtonView.swift in Sources */,
+				A7B5B07D26F2BB93008CFC7E /* PersistencyDataProtocol.swift in Sources */,
 				A7B5B03526F211A9008CFC7E /* CharacterDetailCoordinator.swift in Sources */,
 				A7B5B05026F22881008CFC7E /* CharacterDetailHeaderResuableView.swift in Sources */,
 				A759898326F13485008B11CF /* GenericTableViewCell.swift in Sources */,
@@ -962,10 +1039,13 @@
 				A759899D26F13C3F008B11CF /* MainCoordinator.swift in Sources */,
 				A759899126F1393D008B11CF /* ApplicationStoryBoards.swift in Sources */,
 				A75989E126F16E2B008B11CF /* ContentDisplayerCollectionViewCell.swift in Sources */,
+				A7B5B08726F2CB7B008CFC7E /* FavouritesViewController.swift in Sources */,
+				A7B5B08526F2CB61008CFC7E /* FavouritesViewModel.swift in Sources */,
 				A75989B426F15BC8008B11CF /* NavigationController+Extension.swift in Sources */,
 				A759899326F13949008B11CF /* GenericValueProtocol.swift in Sources */,
 				A7B5B03C26F2126A008CFC7E /* CharacterDetailAssembler.swift in Sources */,
 				A7B5B06526F28389008CFC7E /* ComicsViewData.swift in Sources */,
+				A7B5B07826F2AE60008CFC7E /* FavouriteButtonViewData.swift in Sources */,
 				A7B5B03E26F2192A008CFC7E /* MainViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

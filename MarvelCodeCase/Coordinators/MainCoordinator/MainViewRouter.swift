@@ -11,4 +11,6 @@ protocol MainViewRouter: AnyObject {
     
     func pushDetail(with id: Int)
     
+    func pushFavourites()
+    
 }

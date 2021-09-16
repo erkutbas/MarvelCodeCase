@@ -1,16 +1,20 @@
 //
-//  MainViewController.swift
+//  FavouritesViewController.swift
 //  MarvelCodeCase
 //
-//  Created by Erkut Bas on 14.09.2021.
+//  Created by Erkut Bas on 16.09.2021.
 //
 
 import UIKit
 import RxSwift
 
-class MainViewController: BaseViewController<MainViewModel> {
+class FavouritesViewController: BaseViewController<FavouritesViewModel> {
     
-    weak var router: MainViewRouter?
+    deinit {
+        print("DEINIT FavouritesViewController")
+    }
+    
+    weak var router: FavouritesRouter?
     
     private let disposeBag = DisposeBag()
     
@@ -19,23 +23,20 @@ class MainViewController: BaseViewController<MainViewModel> {
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         setupTitle()
-        appendRefreshButton()
         addCharacterListComponent()
-        
         listenViewModelDataState()
         listenViewModelSelectedData()
-        
-        viewModel.getData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setTintColor(.white)
         navigationController?.backgroundColor(MarvelCodeCaseColor.marvelRed.value)
+        viewModel.getData()
     }
     
     private func addCharacterListComponent() {
-        characterListComponent = ItemCollectionComponent(data: ItemCollectionViewData(isRefreshingSupported: true))
+        characterListComponent = ItemCollectionComponent()
         characterListComponent.translatesAutoresizingMaskIntoConstraints = false
         characterListComponent.setupDelegation(with: viewModel)
         
@@ -56,10 +57,8 @@ class MainViewController: BaseViewController<MainViewModel> {
             switch state {
             case .done:
                 self?.characterListComponent.reloadCollectionComponent()
-//                self?.dimmingView.activationManager(activate: false)
             case .loading:
                 break
-//                self?.dimmingView.activationManager(activate: true)
             case .reloadIndex(let indexPath):
                 self?.characterListComponent
                     .reloadItem(at: indexPath)
@@ -73,15 +72,6 @@ class MainViewController: BaseViewController<MainViewModel> {
         }
     }
     
-    private func appendRefreshButton() {
-        let barButtonRefresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: .refreshTapped)
-        barButtonRefresh.tintColor = .white
-        let barButtonBookmark = UIBarButtonItem(image: UIImage(imageLiteralResourceName: "favorite"), style: .plain, target: self, action: .favouriteTapped)
-        barButtonBookmark.tintColor = .white
-
-        navigationItem.rightBarButtonItems = [barButtonRefresh, barButtonBookmark]
-    }
-    
     private func setupTitle() {
         view.backgroundColor = .white
         let navLabel = UILabel()
@@ -89,7 +79,7 @@ class MainViewController: BaseViewController<MainViewModel> {
                                                     .foregroundColor: UIColor.white,
                                                     .font: UIFont.systemFont(ofSize: 30.0, weight: UIFont.Weight.bold),
                                                     .kern: -4])
-        navTitle.append(NSMutableAttributedString(string: " Characters", attributes:[
+        navTitle.append(NSMutableAttributedString(string: " Favourites", attributes:[
                                                     .font: UIFont.boldSystemFont(ofSize: 16.0),
                                                     .foregroundColor: UIColor.white,
                                                     .kern: -0.75]))
@@ -97,17 +87,4 @@ class MainViewController: BaseViewController<MainViewModel> {
         self.navigationItem.titleView = navLabel
     }
     
-    @objc fileprivate func refreshTapped(_ sender: UIBarButtonItem) {
-        viewModel.refreshData(with: true)
-    }
-    
-    @objc fileprivate func favouriteTapped(_ sender: UIBarButtonItem) {
-        router?.pushFavourites()
-    }
-    
-}
-
-fileprivate extension Selector {
-    static let refreshTapped = #selector(MainViewController.refreshTapped)
-    static let favouriteTapped = #selector(MainViewController.favouriteTapped)
 }
