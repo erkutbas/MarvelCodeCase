@@ -15,6 +15,8 @@ class ClientSideAssembler: Assembly {
     func assemble(container: Container) {
     
         container.autoregister(PersistencyDataProtocol.self, initializer: PersistencyDataManager.init).inObjectScope(.container)
+        container.autoregister(LottieManagerProtocol.self, initializer: LottieManager.init).inObjectScope(.container)
+        container.autoregister(UseCaseListener.self, initializer: UseCaseListenerManager.init).inObjectScope(.container)
 
     }
     

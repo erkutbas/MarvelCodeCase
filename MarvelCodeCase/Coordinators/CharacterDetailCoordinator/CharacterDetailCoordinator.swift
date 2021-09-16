@@ -18,7 +18,7 @@ class CharacterDetailCoordinator: BaseCoordinator<CharacterDetailViewModel> {
     }
     
     func setupCharacterId(by value: Int) -> Self {
-        viewModel.setupCharacterId(by: value)
+        _ = viewModel.setupCharacterId(by: value)
         return self
     }
     

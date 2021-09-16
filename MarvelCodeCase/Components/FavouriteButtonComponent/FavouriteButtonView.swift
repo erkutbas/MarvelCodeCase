@@ -66,7 +66,6 @@ class FavouriteButtonView: GenericBaseView<FavouriteButtonViewData> {
     
     override func loadDataToView() {
         super.loadDataToView()
-        guard let data = returnData() else { return }
         colorManager()
     }
     

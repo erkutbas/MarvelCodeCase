@@ -75,6 +75,14 @@
 		A75989F326F189CB008B11CF /* NetworkAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F226F189CB008B11CF /* NetworkAssembler.swift */; };
 		A75989F626F18D81008B11CF /* AccessProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F526F18D81008B11CF /* AccessProviderManager.swift */; };
 		A75989F926F190E3008B11CF /* CharacterDataResponsibleAssember.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75989F826F190E3008B11CF /* CharacterDataResponsibleAssember.swift */; };
+		A78582EF26F3466A0060EB90 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = A78582EE26F3466A0060EB90 /* Lottie */; };
+		A78582F326F347270060EB90 /* LottieManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78582F126F347270060EB90 /* LottieManagerProtocol.swift */; };
+		A78582F426F347270060EB90 /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78582F226F347270060EB90 /* LottieManager.swift */; };
+		A785830326F347720060EB90 /* LottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78582FD26F347720060EB90 /* LottieViewController.swift */; };
+		A785830726F348930060EB90 /* 9844-loading-40-paperplane.json in Resources */ = {isa = PBXBuildFile; fileRef = A785830626F348930060EB90 /* 9844-loading-40-paperplane.json */; };
+		A785830A26F3490D0060EB90 /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785830926F3490D0060EB90 /* AtomicValue.swift */; };
+		A785830D26F349E10060EB90 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785830C26F349E10060EB90 /* UIApplication+Extension.swift */; };
+		A785831026F34CC10060EB90 /* UseCaseListenerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785830F26F34CC10060EB90 /* UseCaseListenerManager.swift */; };
 		A7B5B03526F211A9008CFC7E /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B03426F211A9008CFC7E /* CharacterDetailCoordinator.swift */; };
 		A7B5B03726F211C3008CFC7E /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B03626F211C3008CFC7E /* CharacterDetailViewModel.swift */; };
 		A7B5B03926F211F3008CFC7E /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B5B03826F211F3008CFC7E /* CharacterDetailViewController.swift */; };
@@ -197,6 +205,13 @@
 		A75989F226F189CB008B11CF /* NetworkAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembler.swift; sourceTree = "<group>"; };
 		A75989F526F18D81008B11CF /* AccessProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessProviderManager.swift; sourceTree = "<group>"; };
 		A75989F826F190E3008B11CF /* CharacterDataResponsibleAssember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataResponsibleAssember.swift; sourceTree = "<group>"; };
+		A78582F126F347270060EB90 /* LottieManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieManagerProtocol.swift; sourceTree = "<group>"; };
+		A78582F226F347270060EB90 /* LottieManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
+		A78582FD26F347720060EB90 /* LottieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieViewController.swift; sourceTree = "<group>"; };
+		A785830626F348930060EB90 /* 9844-loading-40-paperplane.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "9844-loading-40-paperplane.json"; sourceTree = "<group>"; };
+		A785830926F3490D0060EB90 /* AtomicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		A785830C26F349E10060EB90 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		A785830F26F34CC10060EB90 /* UseCaseListenerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseListenerManager.swift; sourceTree = "<group>"; };
 		A7B5B03426F211A9008CFC7E /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
 		A7B5B03626F211C3008CFC7E /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		A7B5B03826F211F3008CFC7E /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A759897126F130F5008B11CF /* RxRelay in Frameworks */,
+				A78582EF26F3466A0060EB90 /* Lottie in Frameworks */,
 				A759896726F130C9008B11CF /* Swinject in Frameworks */,
 				A759896F26F130F5008B11CF /* RxCocoa in Frameworks */,
 				A75989E826F173EC008B11CF /* MarvelDataLayer in Frameworks */,
@@ -367,6 +383,8 @@
 		A759894F26F13072008B11CF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				A785830E26F34CB30060EB90 /* UseCaseListenerManager */,
+				A78582F026F347270060EB90 /* LottieManager */,
 				A7B5B07926F2BB5D008CFC7E /* PersistenceManager */,
 				A75989F426F18D6C008B11CF /* AccessProviderManager */,
 				A75989DB26F16C99008B11CF /* CacheManagers */,
@@ -380,7 +398,6 @@
 			children = (
 				A75989A826F14117008B11CF /* Protocols */,
 				A759895126F13072008B11CF /* Assemblers */,
-				A759895426F13072008B11CF /* Extensions */,
 			);
 			path = DependencyManager;
 			sourceTree = "<group>";
@@ -411,6 +428,7 @@
 		A759895426F13072008B11CF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A785830C26F349E10060EB90 /* UIApplication+Extension.swift */,
 				A759895526F13072008B11CF /* Assembler+Extension.swift */,
 				A75989B326F15BC8008B11CF /* NavigationController+Extension.swift */,
 				A75989C726F16A15008B11CF /* UICollectionView+Extension.swift */,
@@ -507,6 +525,8 @@
 		A75989A226F1409C008B11CF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A759895426F13072008B11CF /* Extensions */,
+				A785830826F348DF0060EB90 /* AtomicHelpers */,
 				A75989B826F15C3A008B11CF /* ColorHelpers */,
 				A75989B526F15BFD008B11CF /* Assets */,
 				A75989A326F140A1008B11CF /* ViewControllerUtils */,
@@ -675,6 +695,57 @@
 			path = CharacterDataResponsibleAssember;
 			sourceTree = "<group>";
 		};
+		A78582F026F347270060EB90 /* LottieManager */ = {
+			isa = PBXGroup;
+			children = (
+				A78582F626F347720060EB90 /* LottieFile */,
+				A78582FA26F347720060EB90 /* Views */,
+				A78582F526F3475B0060EB90 /* Manager */,
+			);
+			path = LottieManager;
+			sourceTree = "<group>";
+		};
+		A78582F526F3475B0060EB90 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A78582F126F347270060EB90 /* LottieManagerProtocol.swift */,
+				A78582F226F347270060EB90 /* LottieManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A78582F626F347720060EB90 /* LottieFile */ = {
+			isa = PBXGroup;
+			children = (
+				A785830626F348930060EB90 /* 9844-loading-40-paperplane.json */,
+			);
+			path = LottieFile;
+			sourceTree = "<group>";
+		};
+		A78582FA26F347720060EB90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A78582FD26F347720060EB90 /* LottieViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A785830826F348DF0060EB90 /* AtomicHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				A785830926F3490D0060EB90 /* AtomicValue.swift */,
+			);
+			path = AtomicHelpers;
+			sourceTree = "<group>";
+		};
+		A785830E26F34CB30060EB90 /* UseCaseListenerManager */ = {
+			isa = PBXGroup;
+			children = (
+				A785830F26F34CC10060EB90 /* UseCaseListenerManager.swift */,
+			);
+			path = UseCaseListenerManager;
+			sourceTree = "<group>";
+		};
 		A7B5B03326F21192008CFC7E /* CharacterDetailCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -835,6 +906,7 @@
 				A759896E26F130F5008B11CF /* RxCocoa */,
 				A759897026F130F5008B11CF /* RxRelay */,
 				A75989E726F173EC008B11CF /* MarvelDataLayer */,
+				A78582EE26F3466A0060EB90 /* Lottie */,
 			);
 			productName = MarvelCodeCase;
 			productReference = A759890F26F1302E008B11CF /* MarvelCodeCase.app */;
@@ -912,6 +984,7 @@
 				A759896826F130DD008B11CF /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
 				A759896B26F130F5008B11CF /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A75989E626F173EC008B11CF /* XCRemoteSwiftPackageReference "MarvelDataLayer" */,
+				A78582ED26F3466A0060EB90 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = A759891026F1302E008B11CF /* Products */;
 			projectDirPath = "";
@@ -932,6 +1005,7 @@
 				A759892226F1302F008B11CF /* LaunchScreen.storyboard in Resources */,
 				A759891F26F1302F008B11CF /* Assets.xcassets in Resources */,
 				A75989B726F15C0F008B11CF /* ColorAssets.xcassets in Resources */,
+				A785830726F348930060EB90 /* 9844-loading-40-paperplane.json in Resources */,
 				A759897326F1315D008B11CF /* SplashViewStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -970,6 +1044,7 @@
 				A7B5B03926F211F3008CFC7E /* CharacterDetailViewController.swift in Sources */,
 				A75989D826F16C21008B11CF /* CustomImageViewComponentData.swift in Sources */,
 				A7B5B08326F2CB45008CFC7E /* FavouritesCoordinator.swift in Sources */,
+				A785830D26F349E10060EB90 /* UIApplication+Extension.swift in Sources */,
 				A759891D26F1302E008B11CF /* MarvelCodeCase.xcdatamodeld in Sources */,
 				A7B5B06226F2684F008CFC7E /* CharacterDetailInfoCellView.swift in Sources */,
 				A759898D26F138DE008B11CF /* SplashCoordinator.swift in Sources */,
@@ -979,13 +1054,16 @@
 				A7B5B04326F2222E008CFC7E /* CharacterDetailHeaderViewData.swift in Sources */,
 				A759899526F13A8B008B11CF /* InteractivePopGestureDelegate.swift in Sources */,
 				A7B5B05426F25705008CFC7E /* CharacterDetailDataManager.swift in Sources */,
+				A78582F426F347270060EB90 /* LottieManager.swift in Sources */,
 				A7B5B05B26F265D3008CFC7E /* TitleBasedViewData.swift in Sources */,
 				A75989AA26F14127008B11CF /* AssemblerResolverDelegate.swift in Sources */,
 				A7B5B07126F2A279008CFC7E /* TitleContainerView.swift in Sources */,
 				A7B5B03726F211C3008CFC7E /* CharacterDetailViewModel.swift in Sources */,
 				A75989F326F189CB008B11CF /* NetworkAssembler.swift in Sources */,
 				A75989A126F13C4E008B11CF /* MainViewController.swift in Sources */,
+				A78582F326F347270060EB90 /* LottieManagerProtocol.swift in Sources */,
 				A759897F26F13485008B11CF /* GenericBaseView.swift in Sources */,
+				A785830A26F3490D0060EB90 /* AtomicValue.swift in Sources */,
 				A75989D726F16C21008B11CF /* CustomImageViewComponentContainer.swift in Sources */,
 				A759898126F13485008B11CF /* BaseTableViewCell.swift in Sources */,
 				A759891326F1302E008B11CF /* AppDelegate.swift in Sources */,
@@ -1018,6 +1096,7 @@
 				A7B5B08C26F2D2BC008CFC7E /* FavouritesRouter.swift in Sources */,
 				A7B5B05626F26235008CFC7E /* Thumbnail+Extension.swift in Sources */,
 				A759899F26F13C46008B11CF /* MainViewModel.swift in Sources */,
+				A785831026F34CC10060EB90 /* UseCaseListenerManager.swift in Sources */,
 				A75989CA26F16A2E008B11CF /* UIView+Extension.swift in Sources */,
 				A759896126F13079008B11CF /* Coordinator.swift in Sources */,
 				A759898026F13485008B11CF /* BaseView.swift in Sources */,
@@ -1028,6 +1107,7 @@
 				A759898226F13485008B11CF /* BaseCollectionViewCell.swift in Sources */,
 				A75989F626F18D81008B11CF /* AccessProviderManager.swift in Sources */,
 				A759897526F131A2008B11CF /* SplashViewController.swift in Sources */,
+				A785830326F347720060EB90 /* LottieViewController.swift in Sources */,
 				A7B5B08A26F2CD18008CFC7E /* FavouritesAssembler.swift in Sources */,
 				A75989DD26F16CA6008B11CF /* ImageCacheManager.swift in Sources */,
 				A7B5B07626F2AE5B008CFC7E /* FavouriteButtonView.swift in Sources */,
@@ -1405,6 +1485,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		A78582ED26F3466A0060EB90 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1437,6 +1525,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A75989E626F173EC008B11CF /* XCRemoteSwiftPackageReference "MarvelDataLayer" */;
 			productName = MarvelDataLayer;
+		};
+		A78582EE26F3466A0060EB90 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A78582ED26F3466A0060EB90 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 

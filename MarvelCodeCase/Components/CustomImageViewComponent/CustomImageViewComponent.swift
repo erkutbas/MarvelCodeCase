@@ -12,7 +12,6 @@ class CustomImageViewComponent: UIImageView {
     private var imageUrlString: String?
     
     func setData(componentData: CustomImageViewComponentData) {
-        print("componentData : \(componentData.imageUrl)")
         DispatchQueue.main.async { [weak self] in
             switch componentData.loadingType {
             case .memory:

@@ -68,7 +68,6 @@ class MainViewModel: BaseViewModelDelegate {
         case .failure(let error):
             print("error : \(error)")
         case .success(let response):
-            print("response :\(response)")
             mainViewDataFormatter.setData(with: response)
             collectionState?(externalRefresh ? .reloadIndex(IndexPath(item: 0, section: 0)) : .done)
             externalRefresh = false
@@ -102,7 +101,6 @@ extension MainViewModel: ItemCollectionComponentDelegate {
     }
 
     func isLoadingCell(for index: Int) -> Bool {
-        print("isLoadingCell index : \(index)")
         return index >= mainViewDataFormatter.getCount()
     }
 

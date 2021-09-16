@@ -109,7 +109,6 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
         case .failure(let error):
             print("error : \(error)")
         case .success(let response):
-            print("response :\(response)")
             self.dataConverter(from: response)
         }
     }
@@ -120,7 +119,6 @@ class CharacterDetailDataManager: CharacterDetailDataManagerProtocol {
         case .failure(let error):
             print("error : \(error)")
         case .success(let response):
-            print("response :\(response)")
             self.comicsMapper(from: response)
         }
     }
