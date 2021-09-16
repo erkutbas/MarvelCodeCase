@@ -12,7 +12,7 @@ extension UINavigationController {
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.isTranslucent = true
-        self.navigationBar.tintColor = MarvelCodeCaseColor.defaultBackground.value
+        //self.navigationBar.tintColor = MarvelCodeCaseColor.defaultBackground.value
     }
 
     func setTintColor(_ color: UIColor) {

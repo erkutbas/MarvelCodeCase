@@ -31,7 +31,6 @@ class CustomImageViewComponent: UIImageView {
             }
             
             DispatchQueue.main.async { [weak self] in
-                //self?.handleTaskResponse(data: data, imageUrl: componentData.imageUrl)
                 self?.handleTaskResponse(data: data, componentData: componentData)
             }
             
@@ -105,7 +104,6 @@ class CustomImageViewComponent: UIImageView {
         if FileManager.default.fileExists(atPath: fileURL.path) {
             do {
                 try FileManager.default.removeItem(atPath: fileURL.path)
-                print("Removed old image")
             } catch let removeError {
                 print("couldn't remove file at path", removeError)
             }

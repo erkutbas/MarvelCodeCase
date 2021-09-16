@@ -10,10 +10,6 @@ import RxSwift
 
 class FavouritesViewController: BaseViewController<FavouritesViewModel> {
     
-    deinit {
-        print("DEINIT FavouritesViewController")
-    }
-    
     weak var router: FavouritesRouter?
     
     private let disposeBag = DisposeBag()

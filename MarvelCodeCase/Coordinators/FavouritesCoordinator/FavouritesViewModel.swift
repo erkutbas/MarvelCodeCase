@@ -10,10 +10,6 @@ import RxSwift
 
 class FavouritesViewModel: BaseViewModelDelegate {
     
-    deinit {
-        print("DEINIT FavouritesViewModel")
-    }
-    
     var dismissInformer: PublishSubject<Void>? = PublishSubject<Void>()
     private var selectedItemBlock: CollectionSelectedItemBlock?
     private var collectionState: CollectionLoadingStateBlock?

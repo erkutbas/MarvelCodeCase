@@ -24,7 +24,6 @@ class SplashScreenViewModel: BaseViewModelDelegate {
          let's inform to move forward
          */
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            print("takasi")
             self?.fireSplashProcessFinish()
         }
     }

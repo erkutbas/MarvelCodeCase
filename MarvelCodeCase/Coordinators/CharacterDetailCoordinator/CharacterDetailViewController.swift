@@ -10,10 +10,6 @@ import RxSwift
 
 class CharacterDetailViewController: BaseViewController<CharacterDetailViewModel> {
     
-    deinit {
-        print("DEINIT CharacterDetailViewController")
-    }
-    
     private let disposeBag = DisposeBag()
     
     private var characterDetailComponent: CharacterDetailView!

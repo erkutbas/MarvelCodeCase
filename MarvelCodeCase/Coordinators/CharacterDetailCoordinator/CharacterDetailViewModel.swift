@@ -12,10 +12,6 @@ import NetworkEntityLayer
 
 class CharacterDetailViewModel: BaseViewModelDelegate {
     
-    deinit {
-        print("DEINIT CharacterDetailViewModel")
-    }
-    
     var dismissInformer: PublishSubject<Void>? = PublishSubject<Void>()
     private var dataState: CharacterDetailDataBlock?
     

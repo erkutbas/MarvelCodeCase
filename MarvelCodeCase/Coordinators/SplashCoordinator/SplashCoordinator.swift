@@ -11,10 +11,6 @@ import RxCocoa
 
 class SplashCoordinator: BaseCoordinator<SplashScreenViewModel> {
     
-    deinit {
-        print("DEINIT SplashCoordinator")
-    }
-    
     private let disposeBag = DisposeBag()
     
     private var splashFinalize = BehaviorRelay<Bool>(value: false)

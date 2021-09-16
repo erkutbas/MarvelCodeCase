@@ -83,9 +83,6 @@ class LottieViewController: UIViewController {
     }
     
     func animationOperationKiller(with completion: (() -> Void)?) {
-        print("presenting : \(self.presentingViewController)")
-        print("presented  : \(self.presentedViewController)")
-        print("navigation : \(self.navigationController)")
         dismiss(animated: true, completion: completion)
     }
     

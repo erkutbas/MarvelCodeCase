@@ -10,10 +10,6 @@ import RxSwift
 
 class FavouritesCoordinator: BaseCoordinator<FavouritesViewModel> {
 
-    deinit {
-        print("DEINIT FavouritesCoordinator")
-    }
-    
     private let disposeBag = DisposeBag()
     
     override func start() {

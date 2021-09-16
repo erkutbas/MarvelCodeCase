@@ -27,8 +27,4 @@ class CharacterDetailCoordinator: BaseCoordinator<CharacterDetailViewModel> {
         self.parentCoordinator?.didFinish(coordinator: self)
     }
     
-    deinit {
-        print("DEINIT CharacterDetailCoordinator")
-    }
-    
 }

@@ -96,7 +96,6 @@ class ItemCollectionComponent: GenericBaseView<ItemCollectionViewData> {
     
     @objc fileprivate func pullToRefreshAction(_ sender: UIRefreshControl) {
         pullToRefresh.beginRefreshing()
-        print("pullToRefresh.isRefreshing : \(pullToRefresh.isRefreshing)")
         guard pullToRefresh.isRefreshing else { return }
         delegate?.refreshCollectionView()
     }
